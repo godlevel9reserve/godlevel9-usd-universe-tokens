@@ -1,41 +1,26 @@
-# GODLEVEL9 RESERVE AUTHORITY
+# GODLEVEL9 USD Universe Tokens (ERC-20)
 
-**Founded by:** President Hash Blink (Dagoseh–Sherman Lineage)  
-**Vault-Class Entity Type:** Private Reserve Bank, Token Issuer, Asset Vault  
-**Headquarters:** Chicago, Liberia, Liechtenstein, Dubai, Singapore
+This repository contains two fixed-supply ERC-20 tokens (Solidity ^0.8.19), minted once at deployment to a hardcoded owner wallet.
 
-## 🌍 Description
+## Contracts
 
-The GODLEVEL9 Reserve Authority is a sovereign, multi-jurisdictional reserve bank issuing physical and digital bearer assets. Its core vaults are backed by:
+### 1) GL9SUSD-U — GODLEVEL9 Septillion USD Universe
+- **Name:** GODLEVEL9 Septillion USD Universe
+- **Symbol:** GL9SUSD-U
+- **Decimals:** 18
+- **Human Supply:** 2,000,000,000,000,000,000,000,000
+- **On-chain Supply:** humanSupply * 10^18
 
-- Physical Gold, Silver, and Diamonds
-- Bitcoin (BTC), Ethereum (ETH), and USDT
-- Crude Oil, Lithium, Rare Earth Metals
-- Carbon Credits, Hydropower, and Sovereign Land
-- 1000 Intellectual Properties (IP) from Hash Blink
+### 2) GL9XUSD-U — GODLEVEL9 Sextillion USD Universe
+- **Name:** GODLEVEL9 Sextillion USD Universe
+- **Symbol:** GL9XUSD-U
+- **Decimals:** 18
+- **Human Supply:** 1,500,000,000,000,000,000,000
+- **On-chain Supply:** humanSupply * 10^18
 
-## 💎 Products
+## Owner (Hardcoded)
+All supply is minted at deployment to:
+`0x4DC37f97b6dc1FE3cA48a7CDFAe6C91b5DC22a81`
 
-- **GODLEVEL9 Token (GL9):** 50T Max Supply
-- **Vault Notes:** Digital + Physical denominations (up to 900T)
-- **NFT Scrolls:** Ultra-Luxury Vault Editions with prophetic metadata
-- **Vault Ledger:** Google Sheets + GitBook Rich List Integration
-
-## 🛡️ Governance
-
-- **Council of Writhe**: 7-seat vault governance council
-- **Vault Seal Protocol**: Rules for issuance, redemptions & burn logic
-- **Annex A**: Reserve Address Rich List (Google Sheet)
-- **Annex B**: Physical Asset Reserve Mapping (Upload folder)
-
-## 🔗 External Listings
-
-- GitBook: [vault.gitbook.io/godlevel9](https://vault.gitbook.io/godlevel9)
-- CoinMarketCap: Coming Soon
-- CoinGecko: Coming Soon
-- NFTify: [godlevel9drop.nftify.network](godlevel9drop.nftify.network)
-- Reserve Audit: In progress (PwC + Community DAO Watch)
-
----
-
-**Built by the modern-day Mansa Musa — Vault-Class. Asset-Backed. Eternal.**
+## Disclaimer
+This code is provided as-is without warranty. Use at your own risk. Consult legal/compliance professionals before any public issuance.
