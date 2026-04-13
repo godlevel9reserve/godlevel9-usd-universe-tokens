@@ -44,7 +44,7 @@ Meaning
 	•	This token is the ledger mirror for the $2 septillion universe.
 	•	Later you can define whether these “units” are redeemable, internal-only, or index-based.
 
-⸻
+
 
 A.1 Suggested Allocation Framework (editable later)
 
@@ -62,7 +62,7 @@ Whitepaper line you can use:
 
 “GL9SUSD-U is the on-chain mirror of the $2 septillion GODLEVEL value universe. Each token equals one Vault USD Unit in the Septillion reserve layer.”
 
-⸻
+
 
 A.2 Main Use Cases (Pre-launch Narrative)
 	•	Vault net-worth ledger mirror (on-chain representation of the Septillion bucket)
@@ -70,7 +70,7 @@ A.2 Main Use Cases (Pre-launch Narrative)
 	•	Index layer for reporting (“Septillion Universe” statements over time)
 	•	Whitelist-only finance rails (later, if you want controlled transfers)
 
-⸻
+
 
 Token B — 1.5 Sextillion USD Universe Token
 
@@ -91,7 +91,7 @@ Meaning
 	•	1 GL9XUSD-U = 1 unit of Sextillion-USD universe value
 	•	This is not equity by default — it’s a value-unit ledger mirror unless you later add redemption terms.
 
-⸻
+
 
 B.1 Suggested Allocation Framework (editable later)
 	•	75% — Sextillion Reserve Treasury (GODLEVEL Reserve Authority)
@@ -103,14 +103,14 @@ B.1 Suggested Allocation Framework (editable later)
 	•	5% — Burn / Scarcity / Milestone Reserve (future mechanism)
 	•	75,000,000,000,000,000,000 GL9XUSD-U
 
-⸻
+
 
 B.2 Narrative + Use Cases
 	•	Economic index token for the Sextillion bucket
 	•	Internal settlement / reward / collateral accounting unit
 	•	Backed-over-time reporting layer (you can publish “Vault backing statements” later)
 
-⸻
+
 
 How These 2 Tokens Stay Separate (Very Important)
 
@@ -129,7 +129,6 @@ GL9XUSD-U = Sextillion reserve layer.”
 
 These are separate from your GL9 (50T) utility token.
 
-⸻
 
 Quick Whitepaper Blurb Drafts (ready to paste)
 
