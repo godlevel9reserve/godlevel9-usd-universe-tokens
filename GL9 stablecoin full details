@@ -1,0 +1,3039 @@
+<!-- =========================================================
+GODLEVEL9 USD Stablecoin Program — MASTER CUSTOM CODE (ALL PAGES IN ONE)
+Paste into a Custom Code/Embed block that renders HTML in the BODY.
+If your builder only allows HEAD code, keep the META/OG/TW/JSON-LD/STYLE parts
+in the Header/Head area, and paste the <div id="gl9-program">…</div> body later.
+========================================================== -->
+
+<!-- =========================
+HEAD / SEO (safe in <head>)
+========================= -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GODLEVEL9 USD Stablecoin Program</title>
+<meta
+  name="description"
+  content="GL9SUSD (Septillion Series) and GL9XUSD (Sextillion Series) — public stablecoin program pages including reserves, redemption at par, AML/KYC compliance, attestations/reporting, transparency dashboard, reserve policy, redemption policy, risk disclosures, compliance overview, and program terms."
+/>
+<meta name="robots" content="index,follow" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<meta name="theme-color" content="#0b0b0b" />
+
+<!-- Canonical (REPLACE) -->
+<link rel="canonical" href="https://YOURDOMAIN.COM/godlevel9-usd-stablecoin-program" />
+
+<!-- Open Graph (REPLACE URLs + image) -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="GODLEVEL9 USD Stablecoin Program" />
+<meta
+  property="og:description"
+  content="Two USD-pegged stablecoin series: GL9SUSD (Septillion Series) and GL9XUSD (Sextillion Series) — reserves, redemption, compliance, attestations, and transparency."
+/>
+<meta property="og:url" content="https://YOURDOMAIN.COM/godlevel9-usd-stablecoin-program" />
+<meta property="og:site_name" content="GODLEVEL9 Reserve Authority" />
+<meta property="og:image" content="https://YOURDOMAIN.COM/assets/og-godlevel9-stablecoin.png" />
+
+<!-- Twitter Card (REPLACE image) -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="GODLEVEL9 USD Stablecoin Program" />
+<meta
+  name="twitter:description"
+  content="GL9SUSD + GL9XUSD — reserve-backed USD stablecoin series with redemption, compliance, proof-of-reserves reporting, and disclosures."
+/>
+<meta name="twitter:image" content="https://YOURDOMAIN.COM/assets/og-godlevel9-stablecoin.png" />
+
+<!-- =========================
+STYLE (Vault-class black/gold)
+========================= -->
+<style>
+  :root {
+    --bg: #0b0b0b;
+    --fg: #f2f2f2;
+    --muted: #b8b8b8;
+    --gold: #c9a227;
+    --panel: rgba(255,255,255,0.035);
+    --panel2: rgba(255,255,255,0.055);
+    --border: rgba(201,162,39,0.28);
+    --border2: rgba(255,255,255,0.12);
+    --radius: 16px;
+    --radius2: 12px;
+    --shadow: 0 12px 34px rgba(0,0,0,0.55);
+    --max: 1100px;
+  }
+
+  /* Container */
+  #gl9-program {
+    background: transparent;
+    color: var(--fg);
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  }
+
+  .gl9-wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 18px;
+  }
+
+  /* Hero */
+  .gl9-hero {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(201,162,39,0.08), rgba(255,255,255,0.03));
+    box-shadow: var(--shadow);
+    padding: 18px 16px;
+  }
+
+  .gl9-badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border: 1px solid rgba(201,162,39,.35);
+    border-radius: 999px;
+    color: var(--fg);
+    background: rgba(201,162,39,.08);
+    font-size: 12px;
+    letter-spacing: .3px;
+  }
+
+  .gl9-title {
+    margin: 10px 0 6px 0;
+    font-size: 24px;
+    letter-spacing: 0.2px;
+  }
+
+  .gl9-sub {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.55;
+    font-size: 14px;
+  }
+
+  /* Nav pills */
+  .gl9-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .gl9-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.04);
+    font-size: 12px;
+    color: var(--fg);
+    text-decoration: none;
+  }
+  .gl9-pill:hover { border-color: rgba(201,162,39,0.45); }
+
+  /* Sections */
+  .gl9-section {
+    margin-top: 14px;
+    border: 1px solid rgba(255,255,255,0.10);
+    background: rgba(255,255,255,0.03);
+    border-radius: var(--radius2);
+    padding: 14px;
+  }
+  .gl9-section h2 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+  }
+  .gl9-section h3 {
+    margin: 14px 0 8px 0;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+  }
+  .gl9-section p, .gl9-section li {
+    color: var(--muted);
+    line-height: 1.6;
+    font-size: 13px;
+  }
+  .gl9-section ul {
+    margin: 10px 0 0 18px;
+    padding: 0;
+  }
+
+  /* Cards */
+  .gl9-grid {
+    display: grid;
+    gap: 14px;
+    margin-top: 14px;
+  }
+  @media (min-width: 860px) {
+    .gl9-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .gl9-card {
+    border: 1px solid var(--border2);
+    border-radius: var(--radius2);
+    background: var(--panel);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.45);
+    padding: 14px;
+  }
+  .gl9-card h3 { margin: 0 0 10px 0; font-size: 15px; }
+
+  .gl9-kv {
+    display: grid;
+    gap: 8px;
+  }
+  .gl9-kv div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: 1px dashed rgba(255,255,255,0.10);
+    padding-bottom: 6px;
+  }
+  .gl9-kv span { color: var(--muted); font-size: 12px; }
+  .gl9-kv b { color: var(--fg); font-size: 12px; text-align: right; }
+
+  .gl9-note {
+    border-left: 3px solid var(--gold);
+    padding: 10px 12px;
+    margin: 12px 0 0 0;
+    color: var(--muted);
+    background: rgba(255,255,255,.03);
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .gl9-hr { height: 1px; background: rgba(255,255,255,0.08); margin: 12px 0; }
+
+  .gl9-link {
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(201,162,39,0.35);
+  }
+  .gl9-link:hover { opacity: 0.9; }
+
+  /* Table */
+  .gl9-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .gl9-table th, .gl9-table td {
+    border: 1px solid rgba(255,255,255,0.10);
+    padding: 10px;
+    font-size: 12px;
+    vertical-align: top;
+  }
+  .gl9-table th {
+    background: rgba(201,162,39,0.08);
+    color: var(--fg);
+    text-align: left;
+  }
+  .gl9-table td { color: var(--muted); }
+
+  /* Footer */
+  .gl9-footer {
+    margin-top: 16px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.10);
+    background: rgba(255,255,255,0.03);
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .gl9-nojs {
+    padding: 10px 12px;
+    background: rgba(255,255,255,.05);
+    color: #eaeaea;
+    border-left: 3px solid var(--gold);
+    border-radius: 10px;
+    margin-top: 12px;
+  }
+</style>
+
+<!-- =========================
+JSON-LD Structured Data
+========================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "GODLEVEL9 USD Stablecoin Program",
+  "description": "GL9SUSD (Septillion Series) and GL9XUSD (Sextillion Series) — reserves, redemption at par, compliance, attestations/reporting, transparency dashboard, and disclosures.",
+  "url": "https://YOURDOMAIN.COM/godlevel9-usd-stablecoin-program",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "GODLEVEL9 Reserve Authority",
+    "url": "https://YOURDOMAIN.COM"
+  },
+  "about": [
+    {
+      "@type": "FinancialProduct",
+      "name": "GL9SUSD",
+      "description": "USD-pegged stablecoin series (Septillion Series). 1 token = $1 redemption under published terms.",
+      "category": "Stablecoin"
+    },
+    {
+      "@type": "FinancialProduct",
+      "name": "GL9XUSD",
+      "description": "USD-pegged stablecoin series (Sextillion Series). 1 token = $1 redemption under published terms.",
+      "category": "Stablecoin"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "GODLEVEL9 Reserve Authority"
+  }
+}
+</script>
+
+<!-- =========================
+BODY CONTENT (all pages combined)
+========================= -->
+<div id="gl9-program">
+  <div class="gl9-wrap">
+
+    <!-- Program Hero -->
+    <div class="gl9-hero">
+      <span class="gl9-badge">Public Launch Spec — Reserves + Redemption + Compliance + Reporting</span>
+      <h1 class="gl9-title">GODLEVEL9 USD Stablecoin Program</h1>
+      <p class="gl9-sub">
+        This page contains the full public program copy for two USD-pegged stablecoin series:
+        <b>GL9SUSD (Septillion Series)</b> and <b>GL9XUSD (Sextillion Series)</b> — plus the shared
+        Transparency Dashboard, Redemption Policy, Reserve Policy, Risk Disclosures, Compliance Overview, and Program Terms.
+      </p>
+
+      <div class="gl9-nav">
+        <a class="gl9-pill" href="#page-gl9susd">Landing: GL9SUSD</a>
+        <a class="gl9-pill" href="#page-gl9xusd">Landing: GL9XUSD</a>
+        <a class="gl9-pill" href="#page-transparency">Transparency Dashboard</a>
+        <a class="gl9-pill" href="#page-redemption">Redemption Policy</a>
+        <a class="gl9-pill" href="#page-reserve">Reserve Policy</a>
+        <a class="gl9-pill" href="#page-risk">Risk Disclosures</a>
+        <a class="gl9-pill" href="#page-compliance">Compliance Overview</a>
+        <a class="gl9-pill" href="#page-terms">Program Terms</a>
+      </div>
+
+      <div class="gl9-note">
+        <b>Public launch requirement:</b> If you publicly claim “stablecoin” + “redeemable $1,”
+        the reserve custody, redemption rails, compliance program, and reporting cadence should be truly in place.
+        Until fully live, keep claims framed as <b>policy + commitment</b> and publish effective dates/versioning.
+      </div>
+    </div>
+
+    <!-- Quick Spec Cards -->
+    <div class="gl9-grid">
+      <div class="gl9-card">
+        <h3>GL9SUSD — Septillion Series (Quick Spec)</h3>
+        <div class="gl9-kv">
+          <div><span>Name</span><b>GODLEVEL9 Septillion USD</b></div>
+          <div><span>Symbol</span><b>GL9SUSD</b></div>
+          <div><span>Peg</span><b>1 GL9SUSD = $1.00 USD</b></div>
+          <div><span>Series Cap</span><b>2,000,000,000,000,000,000,000,000</b></div>
+          <div><span>Decimals</span><b>18</b></div>
+          <div><span>Network</span><b>Base / Ethereum / Multi-chain (set at deployment)</b></div>
+        </div>
+      </div>
+
+      <div class="gl9-card">
+        <h3>GL9XUSD — Sextillion Series (Quick Spec)</h3>
+        <div class="gl9-kv">
+          <div><span>Name</span><b>GODLEVEL9 Sextillion USD</b></div>
+          <div><span>Symbol</span><b>GL9XUSD</b></div>
+          <div><span>Peg</span><b>1 GL9XUSD = $1.00 USD</b></div>
+          <div><span>Series Cap</span><b>1,500,000,000,000,000,000,000</b></div>
+          <div><span>Decimals</span><b>18</b></div>
+          <div><span>Network</span><b>Base / Ethereum / Multi-chain (set at deployment)</b></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================
+    LANDING PAGE 1 — GL9SUSD
+    ======================================================= -->
+    <div class="gl9-section" id="page-gl9susd">
+      <h2>Landing Page — GL9SUSD (Septillion Series)</h2>
+
+      <h3>GODLEVEL9 Septillion USD</h3>
+      <p><b>GL9SUSD — USD-Pegged Stablecoin (Septillion Series)</b></p>
+      <p><b>1 GL9SUSD = $1.00 USD</b> (redeemable at par under published terms)</p>
+
+      <p>
+        <b>Series Cap:</b> 2,000,000,000,000,000,000,000,000 GL9SUSD<br />
+        <b>Network:</b> (Base / Ethereum / Multi-chain — set at deployment)<br />
+        <b>Decimals:</b> 18
+      </p>
+
+      <div class="gl9-hr"></div>
+
+      <h3>What GL9SUSD Is</h3>
+      <p>
+        GL9SUSD is the Septillion Series USD stablecoin under the GODLEVEL9 Reserve framework.
+        It is designed for public use with the core pillars that make a stablecoin real:
+      </p>
+      <ul>
+        <li>Reserves</li>
+        <li>Redemption</li>
+        <li>Compliance</li>
+        <li>Transparency</li>
+      </ul>
+      <p>
+        GL9SUSD is issued only when reserves are received, and burned when tokens are redeemed,
+        so circulating supply stays aligned with reserve backing.
+      </p>
+
+      <h3>How the Peg Works (Simple)</h3>
+      <p><b>Circulating GL9SUSD never exceeds verified reserves.</b></p>
+      <ul>
+        <li>Reserves received → GL9SUSD minted</li>
+        <li>GL9SUSD redeemed → GL9SUSD burned</li>
+        <li>Supply + reserve reporting published on schedule</li>
+      </ul>
+      <p>This structure is intended to keep the peg defendable under scrutiny.</p>
+
+      <h3>Reserve Policy (Backing)</h3>
+      <p>GL9SUSD is designed to be fully backed by high-liquidity reserve assets.</p>
+      <p><b>Reserve target</b></p>
+      <ul>
+        <li>≥ 100% backing relative to circulating supply (measured routinely)</li>
+      </ul>
+      <p><b>Eligible reserve assets (conservative set)</b></p>
+      <ul>
+        <li>Cash held at regulated banking partners</li>
+        <li>Short-dated U.S. Treasury bills (or comparable high-liquidity equivalents)</li>
+        <li>Cash-equivalent instruments designed for same/next-day liquidity</li>
+      </ul>
+      <p><b>Custody & segregation</b></p>
+      <ul>
+        <li>Reserves held segregated from operating funds</li>
+        <li>Controls include reconciliations, approvals, and audit trails</li>
+        <li>Custody partners and reserve composition are disclosed in reporting</li>
+      </ul>
+
+      <h3>Minting & Burning Controls</h3>
+      <ul>
+        <li>Minting is restricted to authorized issuer controls</li>
+        <li>Burning occurs on redemption to remove supply</li>
+        <li>Emergency pause capability to protect holders during incidents</li>
+        <li>Optional compliance controls may include whitelisting/blacklisting based on legal requirements</li>
+      </ul>
+
+      <h3>Redemption (How Holders Cash Out)</h3>
+      <p><b>1 GL9SUSD → $1.00 USD</b> under published redemption terms.</p>
+      <p>The public redemption policy defines:</p>
+      <ul>
+        <li>Who can redeem directly (typically KYC-verified customers)</li>
+        <li>Processing windows (same-day/next-day where feasible)</li>
+        <li>Minimums/maximums (if applicable)</li>
+        <li>Fees (if any) and clear calculations</li>
+        <li>Refusal conditions (sanctions/AML, fraud, legal restrictions)</li>
+      </ul>
+
+      <h3>Compliance (Public Launch Standard)</h3>
+      <p>GL9SUSD is operated with a compliance framework suitable for a public stablecoin issuer:</p>
+      <ul>
+        <li>Customer identity verification (KYC) for direct mint/redemption</li>
+        <li>Sanctions screening and risk scoring</li>
+        <li>Transaction monitoring and escalation workflows</li>
+        <li>Recordkeeping, audit trails, incident response</li>
+        <li>Formal policies: AML policy, sanctions policy, risk policy, cybersecurity controls</li>
+      </ul>
+
+      <h3>Transparency (Proof-of-Reserves)</h3>
+      <p>GL9SUSD is supported with a reporting framework that includes:</p>
+      <ul>
+        <li>Circulating supply (on-chain)</li>
+        <li>Reserve totals and reserve composition (category reporting)</li>
+        <li>Custody framework statement</li>
+        <li>Independent attestation / examination schedule (where applicable)</li>
+        <li>Material event reporting (custody changes, redemption disruptions, incidents)</li>
+      </ul>
+
+      <h3>Risks & Disclosures</h3>
+      <p>I disclose risks clearly so the public understands reality:</p>
+      <ul>
+        <li>Custody/bank risk</li>
+        <li>Redemption timing risk during spikes/outages/legal holds</li>
+        <li>Regulatory risk (jurisdictional rule changes)</li>
+        <li>Smart contract and integration risk</li>
+        <li>Secondary market deviations from $1 can occur even with redemption</li>
+      </ul>
+
+      <h3>GL9SUSD Quick Specs (Copy/Paste)</h3>
+      <ul>
+        <li>Name: GODLEVEL9 Septillion USD</li>
+        <li>Symbol: GL9SUSD</li>
+        <li>Peg: 1 token = $1.00 USD (redemption at par under terms)</li>
+        <li>Supply Cap: 2,000,000,000,000,000,000,000,000</li>
+        <li>Decimals: 18</li>
+        <li>Series: Septillion Series (macro reserve bucket)</li>
+      </ul>
+    </div>
+
+    <!-- ======================================================
+    LANDING PAGE 2 — GL9XUSD
+    ======================================================= -->
+    <div class="gl9-section" id="page-gl9xusd">
+      <h2>Landing Page — GL9XUSD (Sextillion Series)</h2>
+
+      <h3>GODLEVEL9 Sextillion USD</h3>
+      <p><b>GL9XUSD — USD-Pegged Stablecoin (Sextillion Series)</b></p>
+      <p><b>1 GL9XUSD = $1.00 USD</b> (redeemable at par under published terms)</p>
+
+      <p>
+        <b>Series Cap:</b> 1,500,000,000,000,000,000,000 GL9XUSD<br />
+        <b>Network:</b> (Base / Ethereum / Multi-chain — set at deployment)<br />
+        <b>Decimals:</b> 18
+      </p>
+
+      <div class="gl9-hr"></div>
+
+      <h3>What GL9XUSD Is</h3>
+      <p>
+        GL9XUSD is the Sextillion Series USD stablecoin under the GODLEVEL9 Reserve framework.
+        It is a separate stablecoin series from GL9SUSD, with its own supply cap and reserve bucket, designed for public use.
+      </p>
+      <p>GL9XUSD follows the same real stablecoin pillars:</p>
+      <ul>
+        <li>Reserves</li>
+        <li>Redemption</li>
+        <li>Compliance</li>
+        <li>Transparency</li>
+      </ul>
+
+      <h3>Why Two Series?</h3>
+      <p>GL9XUSD exists separately to keep reserve accounting clean and modular:</p>
+      <ul>
+        <li>GL9SUSD = Septillion Series (macro reserve bucket)</li>
+        <li>GL9XUSD = Sextillion Series (secondary reserve bucket)</li>
+      </ul>
+      <p>Each series is designed to have:</p>
+      <ul>
+        <li>its own reserve accounts</li>
+        <li>its own disclosure reporting</li>
+        <li>its own attestation references</li>
+        <li>its own program terms if needed</li>
+      </ul>
+
+      <h3>How the Peg Works (Simple)</h3>
+      <p><b>Circulating GL9XUSD never exceeds verified reserves.</b></p>
+      <ul>
+        <li>Reserves received → GL9XUSD minted</li>
+        <li>GL9XUSD redeemed → GL9XUSD burned</li>
+        <li>Supply + reserve reporting published on schedule</li>
+      </ul>
+
+      <h3>Reserve Policy (Backing)</h3>
+      <p>GL9XUSD is designed to be fully backed by high-liquidity reserve assets.</p>
+      <p><b>Reserve target</b></p>
+      <ul>
+        <li>≥ 100% backing relative to circulating supply</li>
+      </ul>
+      <p><b>Eligible reserve assets (conservative set)</b></p>
+      <ul>
+        <li>Cash held at regulated banking partners</li>
+        <li>Short-dated U.S. Treasury bills (or comparable equivalents)</li>
+        <li>Cash-equivalent instruments designed for rapid liquidity</li>
+      </ul>
+      <p><b>Custody & segregation</b></p>
+      <ul>
+        <li>Reserves held segregated from operating funds</li>
+        <li>Reconciliation and audit trails maintained</li>
+        <li>Reserve composition and custody framework disclosed</li>
+      </ul>
+
+      <h3>Minting & Burning Controls</h3>
+      <ul>
+        <li>Restricted minting to authorized issuer controls</li>
+        <li>Burning on redemption to reduce supply</li>
+        <li>Emergency pause function</li>
+        <li>Optional compliance controls (whitelist/blacklist) if legally required</li>
+      </ul>
+
+      <h3>Redemption (How Holders Cash Out)</h3>
+      <p><b>1 GL9XUSD → $1.00 USD</b> under published redemption terms.</p>
+      <p>Redemption policy covers:</p>
+      <ul>
+        <li>Eligibility requirements (typically KYC for direct redemption)</li>
+        <li>Processing windows</li>
+        <li>Limits and fees if applicable</li>
+        <li>Conditions where redemption may be refused (sanctions/AML/fraud/legal)</li>
+      </ul>
+
+      <h3>Compliance (Public Launch Standard)</h3>
+      <p>GL9XUSD operates with a compliance program aligned to public stablecoin expectations:</p>
+      <ul>
+        <li>KYC for direct mint/redemption</li>
+        <li>Sanctions screening</li>
+        <li>Monitoring + incident response</li>
+        <li>Recordkeeping and audit trails</li>
+        <li>Policy framework: AML, sanctions, cybersecurity, fraud controls</li>
+      </ul>
+
+      <h3>Transparency (Proof-of-Reserves)</h3>
+      <p>Reporting includes:</p>
+      <ul>
+        <li>On-chain supply</li>
+        <li>Reserve totals and composition reporting</li>
+        <li>Custody framework statement</li>
+        <li>Attestation / examination schedule (where applicable)</li>
+        <li>Material events disclosure</li>
+      </ul>
+
+      <h3>Risks & Disclosures</h3>
+      <ul>
+        <li>Custody/bank risk</li>
+        <li>Redemption delays under stress/outages/legal holds</li>
+        <li>Regulatory changes by region</li>
+        <li>Contract and integration risk</li>
+        <li>Secondary market price may deviate temporarily from $1</li>
+      </ul>
+
+      <h3>GL9XUSD Quick Specs (Copy/Paste)</h3>
+      <ul>
+        <li>Name: GODLEVEL9 Sextillion USD</li>
+        <li>Symbol: GL9XUSD</li>
+        <li>Peg: 1 token = $1.00 USD (redemption at par under terms)</li>
+        <li>Supply Cap: 1,500,000,000,000,000,000,000</li>
+        <li>Decimals: 18</li>
+        <li>Series: Sextillion Series (secondary reserve bucket)</li>
+      </ul>
+
+      <div class="gl9-note">
+        <b>Legal / Disclosure Notice (Draft):</b><br />
+        GL9SUSD and GL9XUSD are designed as USD-pegged stablecoin series with reserve and redemption policies.
+        Availability, redemption access, and supported jurisdictions may vary based on legal requirements.
+        Nothing on this page is financial advice. Terms, disclosures, and policies are published and updated as the program evolves.
+      </div>
+    </div>
+
+    <!-- ======================================================
+    SHARED PAGE — TRANSPARENCY DASHBOARD
+    ======================================================= -->
+    <div class="gl9-section" id="page-transparency">
+      <h2>Shared Page — Transparency Dashboard (GL9SUSD + GL9XUSD)</h2>
+
+      <h3>GODLEVEL9 Stablecoin Transparency</h3>
+      <p><b>Live reporting for GL9SUSD (Septillion Series) + GL9XUSD (Sextillion Series)</b></p>
+      <p>This dashboard exists to make the two-series system auditable in plain language:</p>
+      <ul>
+        <li>On-chain supply is public</li>
+        <li>Reserves are reported</li>
+        <li>Redemption policies are published</li>
+        <li>Material events are disclosed</li>
+      </ul>
+
+      <h3>1) Live On-Chain Supply</h3>
+      <p>
+        GL9SUSD Circulating Supply: (auto / link to explorer)<br />
+        GL9XUSD Circulating Supply: (auto / link to explorer)
+      </p>
+
+      <p><b>Contracts</b></p>
+      <ul>
+        <li>GL9SUSD Contract: (address)</li>
+        <li>GL9XUSD Contract: (address)</li>
+      </ul>
+
+      <p><b>Core integrity rule</b></p>
+      <p>Circulating supply is designed to remain aligned with verified reserves under the published reserve policy.</p>
+
+      <h3>2) Reserve Summary (Latest Snapshot)</h3>
+      <p>Report Date: (YYYY-MM-DD)</p>
+
+      <h3>GL9SUSD Reserves (Septillion Series)</h3>
+      <ul>
+        <li>Total Reserves (USD): (number)</li>
+        <li>Circulating Supply (USD): (number)</li>
+        <li>Reserve Coverage Ratio: (e.g., 101.2%)</li>
+        <li>Reserve Location/Custody: (custodian/bank summary)</li>
+      </ul>
+
+      <h3>GL9XUSD Reserves (Sextillion Series)</h3>
+      <ul>
+        <li>Total Reserves (USD): (number)</li>
+        <li>Circulating Supply (USD): (number)</li>
+        <li>Reserve Coverage Ratio: (e.g., 100.4%)</li>
+        <li>Reserve Location/Custody: (custodian/bank summary)</li>
+      </ul>
+
+      <h3>3) Reserve Composition (Breakdown)</h3>
+      <p>I publish the reserve mix by category for each series.</p>
+
+      <h3>GL9SUSD Composition</h3>
+      <ul>
+        <li>Cash & Cash Equivalents: (%)</li>
+        <li>U.S. Treasuries (short-dated): (%)</li>
+        <li>Other Eligible Liquidity Instruments: (%)</li>
+        <li>Weighted Avg Maturity (if applicable): (days)</li>
+      </ul>
+
+      <h3>GL9XUSD Composition</h3>
+      <ul>
+        <li>Cash & Cash Equivalents: (%)</li>
+        <li>U.S. Treasuries (short-dated): (%)</li>
+        <li>Other Eligible Liquidity Instruments: (%)</li>
+        <li>Weighted Avg Maturity (if applicable): (days)</li>
+      </ul>
+
+      <h3>4) Attestations / Examinations</h3>
+      <p>
+        Independent Attestation Provider: (name)<br />
+        Cadence: (monthly / quarterly)
+      </p>
+      <p><b>Latest Reports</b></p>
+      <ul>
+        <li>GL9SUSD Attestation: (PDF link)</li>
+        <li>GL9XUSD Attestation: (PDF link)</li>
+        <li>Combined Methodology Notes: (PDF link)</li>
+      </ul>
+
+      <p><b>What an attestation covers</b></p>
+      <ul>
+        <li>Reserve existence (as of the report date)</li>
+        <li>Reserve valuation method</li>
+        <li>Reserve coverage vs circulating supply</li>
+        <li>Custody/segregation confirmation (as applicable)</li>
+      </ul>
+
+      <h3>5) Redemption Performance Metrics</h3>
+      <p>I publish practical redemption stats so the public can judge reliability:</p>
+      <ul>
+        <li>Average Redemption Processing Time: (hours/days)</li>
+        <li>Redemptions Completed (30d): (count / volume)</li>
+        <li>Redemption Queue Status: (normal / elevated / paused)</li>
+        <li>Support Response Time: (SLA)</li>
+      </ul>
+
+      <h3>6) Material Events & Notices</h3>
+      <p>If anything changes that impacts holders, it goes here:</p>
+      <ul>
+        <li>Custodian/bank updates</li>
+        <li>Contract upgrades (if any)</li>
+        <li>Redemption pauses or delays</li>
+        <li>Compliance policy updates</li>
+        <li>Security incidents and postmortems</li>
+      </ul>
+
+      <h3>7) Links</h3>
+      <ul>
+        <li>Redemption Policy: <a class="gl9-link" href="#page-redemption">Jump</a></li>
+        <li>Reserve Policy: <a class="gl9-link" href="#page-reserve">Jump</a></li>
+        <li>Risk Disclosures: <a class="gl9-link" href="#page-risk">Jump</a></li>
+        <li>Compliance Overview: <a class="gl9-link" href="#page-compliance">Jump</a></li>
+        <li>Contact: (support email + compliance email)</li>
+      </ul>
+
+      <div class="gl9-note">
+        Optional live links (replace):<br />
+        GL9SUSD Contract: <code>0xGL9SUSD_CONTRACT</code> — Explorer: <code>https://basescan.org/address/0xGL9SUSD_CONTRACT</code><br />
+        GL9XUSD Contract: <code>0xGL9XUSD_CONTRACT</code> — Explorer: <code>https://basescan.org/address/0xGL9XUSD_CONTRACT</code>
+      </div>
+    </div>
+
+    <!-- ======================================================
+    SHARED PAGE — REDEMPTION POLICY
+    ======================================================= -->
+    <div class="gl9-section" id="page-redemption">
+      <h2>Shared Page — Redemption Policy (GL9SUSD + GL9XUSD)</h2>
+
+      <h3>GODLEVEL9 Stablecoin Redemption Policy</h3>
+      <p><b>Applies to GL9SUSD (Septillion Series) and GL9XUSD (Sextillion Series)</b></p>
+      <p>
+        This page defines how redemption works, who is eligible, what timelines apply, and what conditions
+        may cause delays or refusal.
+      </p>
+      <p><b>Par Redemption Standard:</b> Eligible holders may redeem 1 token for $1.00 USD, subject to the terms below.</p>
+
+      <h3>1) Who Can Redeem</h3>
+      <p>Direct redemption (issuer-side) is available to:</p>
+      <ul>
+        <li>Verified individuals and entities that complete KYC/KYB</li>
+        <li>Users not located in restricted jurisdictions (where applicable)</li>
+        <li>Users that pass sanctions and risk screening</li>
+      </ul>
+      <p>
+        Secondary market holders may still buy/sell on venues that list the tokens, but direct redemption requires verification.
+      </p>
+
+      <h3>2) Supported Redemption Methods</h3>
+      <p>I support redemption via:</p>
+      <ul>
+        <li>Bank transfer (ACH/Wire, where available)</li>
+        <li>Other approved payout rails (optional)</li>
+        <li>Business redemption rails (optional)</li>
+      </ul>
+      <p>Supported currencies: USD (If multi-currency is added later, it will be disclosed here.)</p>
+
+      <h3>3) Redemption Process (Step-by-Step)</h3>
+      <ol style="color: var(--muted); font-size: 13px; line-height: 1.6; margin: 10px 0 0 18px;">
+        <li>Sign in / Verify (KYC/KYB if not already completed)</li>
+        <li>Request Redemption (select token: GL9SUSD or GL9XUSD)</li>
+        <li>Send Tokens to the official redemption address (or redeem via portal contract flow)</li>
+        <li>Compliance Review (automated + manual if flagged)</li>
+        <li>Funds Delivered to the verified payout method</li>
+        <li>Tokens Burned (or otherwise removed from circulation per mechanism)</li>
+      </ol>
+
+      <h3>4) Processing Times</h3>
+      <p>Target processing windows (subject to banking hours and reviews):</p>
+      <ul>
+        <li>Standard: (same business day / next business day)</li>
+        <li>Elevated demand periods: (up to X business days)</li>
+        <li>Manual review cases: (up to Y business days)</li>
+      </ul>
+      <p>If delays occur, the current redemption status is posted on the Transparency Dashboard.</p>
+
+      <h3>5) Minimums, Maximums, and Fees</h3>
+      <ul>
+        <li>Minimum redemption size: (e.g., $100 / $1,000 / none)</li>
+        <li>Maximum per day: (if any)</li>
+        <li>Fees: (none / flat / %)</li>
+      </ul>
+      <p>If fees apply, I disclose: the exact fee schedule, who pays banking fees, and how fees are calculated.</p>
+
+      <h3>6) Compliance Controls (AML / Sanctions)</h3>
+      <p>Redemptions are subject to:</p>
+      <ul>
+        <li>Sanctions screening</li>
+        <li>Fraud screening</li>
+        <li>Transaction monitoring</li>
+        <li>Source-of-funds / source-of-wealth checks (when required)</li>
+        <li>Enhanced due diligence for high-risk categories</li>
+      </ul>
+      <p>This is designed to protect holders and ensure the system can operate publicly.</p>
+
+      <h3>7) When Redemption Can Be Refused</h3>
+      <p>I may refuse or delay redemption if:</p>
+      <ul>
+        <li>The user fails identity verification or compliance checks</li>
+        <li>The transaction is linked to prohibited activity</li>
+        <li>The user is in a restricted jurisdiction</li>
+        <li>There is suspected fraud, theft, or security compromise</li>
+        <li>A legal order or regulatory requirement restricts action</li>
+        <li>A temporary emergency pause is activated for system protection</li>
+      </ul>
+      <p>When possible, I provide a reason and a path to appeal (unless prohibited by law).</p>
+
+      <h3>8) Emergency Pause Policy</h3>
+      <p>
+        In extreme cases (security incident, major exploit attempts, critical infrastructure failure),
+        redemptions may be paused temporarily.
+      </p>
+      <p>If a pause occurs, I publish:</p>
+      <ul>
+        <li>pause start time</li>
+        <li>reason category</li>
+        <li>expected next update time</li>
+        <li>steps being taken</li>
+      </ul>
+
+      <h3>9) Dispute Resolution & Support</h3>
+      <p>
+        Support Contact: (support email)<br />
+        Compliance Contact: (compliance email)<br />
+        Dispute/Appeals: (process link or email)
+      </p>
+
+      <h3>10) Token-Specific Notes (Series Separation)</h3>
+      <p>GL9SUSD and GL9XUSD are separate series. This means:</p>
+      <ul>
+        <li>Redemptions must be requested for the correct token</li>
+        <li>Each series may use separate reserve accounts</li>
+        <li>Each series may publish separate attestations</li>
+        <li>Each series may have separate limits if needed (always disclosed)</li>
+      </ul>
+
+      <h3>11) Public Notice</h3>
+      <p>This policy may update over time. I version all changes and publish effective dates.</p>
+      <ul>
+        <li>Policy Version: v*(#)*</li>
+        <li>Effective Date: (YYYY-MM-DD)</li>
+        <li>Last Updated: (YYYY-MM-DD)</li>
+      </ul>
+    </div>
+
+    <!-- ======================================================
+    SHARED PAGE — RESERVE POLICY
+    ======================================================= -->
+    <div class="gl9-section" id="page-reserve">
+      <h2>Shared Page — Reserve Policy (GL9SUSD + GL9XUSD)</h2>
+
+      <h3>GODLEVEL9 Stablecoin Reserve Policy</h3>
+      <p><b>Applies to GL9SUSD (Septillion Series) and GL9XUSD (Sextillion Series)</b></p>
+      <p>
+        This policy defines what reserves are, what assets qualify, how custody works,
+        how reserve coverage is calculated, and how reserves are reported for both stablecoin series.
+      </p>
+      <p><b>Reserve Standard:</b> Each series is designed to maintain ≥ 100% reserve backing relative to circulating supply, measured on a defined reporting cadence.</p>
+
+      <h3>1) Reserve Coverage Rule (Core Integrity)</h3>
+      <p><b>Reserve Coverage Ratio = (Total Eligible Reserves) ÷ (Circulating Supply)</b></p>
+      <ul>
+        <li>Target: ≥ 1.00x (≥ 100%)</li>
+        <li>If a buffer is used: reserves may be held at &gt; 100% to absorb operational timing and valuation changes.</li>
+      </ul>
+      <p>
+        Important: GL9SUSD and GL9XUSD maintain separate reserve buckets (separate accounting, and where applicable, separate custody accounts).
+      </p>
+
+      <h3>2) Eligible Reserve Assets (Permitted Backing)</h3>
+      <p>Reserves are restricted to high-liquidity assets designed to protect redemption ability:</p>
+
+      <h3>Tier 1 (Primary)</h3>
+      <ul>
+        <li>Cash held at regulated banking partners</li>
+        <li>Demand deposits (cash-equivalent bank balances)</li>
+      </ul>
+
+      <h3>Tier 2 (Highly Liquid Government Instruments)</h3>
+      <ul>
+        <li>Short-dated U.S. Treasury bills (or close equivalents)</li>
+        <li>Overnight or very short-term instruments backed by government securities (where used)</li>
+      </ul>
+
+      <h3>Tier 3 (Cash-Equivalent Funds) — Optional</h3>
+      <ul>
+        <li>Government money market funds (only if they meet internal liquidity and risk standards)</li>
+      </ul>
+
+      <h3>Prohibited / Not Eligible (unless explicitly disclosed and approved)</h3>
+      <ul>
+        <li>Corporate debt / junk bonds</li>
+        <li>Long-duration bonds (high interest-rate sensitivity)</li>
+        <li>Equity securities</li>
+        <li>Illiquid assets (private equity, long-lock products)</li>
+        <li>Cryptoassets as reserve backing (unless explicitly disclosed as a different product category)</li>
+      </ul>
+      <p>If any category outside Tier 1–2 is used, it is disclosed clearly in reporting.</p>
+
+      <h3>3) Reserve Segregation & Ownership</h3>
+      <p>Reserves are held under a segregation standard:</p>
+      <ul>
+        <li>Segregated from operating funds</li>
+        <li>Tracked by series:
+          <ul>
+            <li>GL9SUSD Reserves are accounted for separately</li>
+            <li>GL9XUSD Reserves are accounted for separately</li>
+          </ul>
+        </li>
+        <li>Internal controls ensure reserves are not used for:
+          <ul>
+            <li>operating expenses</li>
+            <li>speculative trading</li>
+            <li>unrelated lending</li>
+            <li>undisclosed collateralization</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>4) Custody & Banking Partners</h3>
+      <p>Reserves are held with approved custody arrangements, such as:</p>
+      <ul>
+        <li>Regulated banks</li>
+        <li>Approved custodians (where applicable)</li>
+        <li>Approved settlement partners for treasuries (where applicable)</li>
+      </ul>
+      <p><b>Custody principles</b></p>
+      <ul>
+        <li>Clear account ownership and control</li>
+        <li>Access controls (multi-approval workflows)</li>
+        <li>Audit trails for all movements</li>
+        <li>Business continuity and incident response procedures</li>
+      </ul>
+      <p><b>Disclosure</b></p>
+      <ul>
+        <li>Custody partners may be listed publicly (subject to contractual and security constraints).</li>
+        <li>If not listed publicly, reserve reports still disclose reserve totals and composition.</li>
+      </ul>
+
+      <h3>5) Minting Rule (Reserve-Linked Issuance)</h3>
+      <p>Tokens are minted under a reserve-linked process:</p>
+      <ul>
+        <li>Mint only after reserve receipt is verified</li>
+        <li>Verification includes:
+          <ul>
+            <li>confirmed bank settlement, and/or</li>
+            <li>confirmed treasury settlement, and/or</li>
+            <li>approved settlement confirmation from custody partner</li>
+          </ul>
+        </li>
+      </ul>
+      <p>No “pre-minting” for circulation is permitted under this policy.</p>
+
+      <h3>6) Redemption Rule (Burn & Settlement)</h3>
+      <p>When redemptions are processed:</p>
+      <ul>
+        <li>tokens are burned (or otherwise permanently removed from circulation via contract mechanism)</li>
+        <li>USD is paid out via approved rails under the Redemption Policy</li>
+      </ul>
+
+      <h3>7) Rebalancing & Liquidity Management</h3>
+      <p>To keep redemption reliable, reserves are managed for liquidity:</p>
+      <ul>
+        <li>a portion is maintained in immediate liquidity (cash/cash equivalents)</li>
+        <li>treasury holdings (if used) are kept short duration</li>
+        <li>maturity laddering is used to avoid liquidity cliffs</li>
+      </ul>
+
+      <h3>8) Attestation / Examination & Reporting Cadence</h3>
+      <p>I publish structured reporting so the public can audit the system.</p>
+      <p><b>Reporting includes</b></p>
+      <ul>
+        <li>circulating supply (per series)</li>
+        <li>total eligible reserves (per series)</li>
+        <li>reserve coverage ratio (per series)</li>
+        <li>reserve composition by category</li>
+        <li>custody framework statement</li>
+        <li>material changes/events</li>
+      </ul>
+
+      <p><b>Cadence</b></p>
+      <ul>
+        <li>Supply: continuous (on-chain)</li>
+        <li>Reserve reporting: (weekly / monthly — set here)</li>
+        <li>Independent attestation/examination: (monthly / quarterly — set here)</li>
+      </ul>
+
+      <h3>9) Material Event Disclosure</h3>
+      <p>If an event materially impacts reserves or redemption, it is disclosed, such as:</p>
+      <ul>
+        <li>custody partner change</li>
+        <li>bank partner change</li>
+        <li>reporting method change</li>
+        <li>redemption pause or major delay</li>
+        <li>security incident affecting reserve operations</li>
+      </ul>
+
+      <h3>10) Policy Versioning</h3>
+      <ul>
+        <li>Policy Version: v*(#)*</li>
+        <li>Effective Date: (YYYY-MM-DD)</li>
+        <li>Last Updated: (YYYY-MM-DD)</li>
+      </ul>
+    </div>
+
+    <!-- ======================================================
+    SHARED PAGE — RISK DISCLOSURES
+    ======================================================= -->
+    <div class="gl9-section" id="page-risk">
+      <h2>Shared Page — Risk Disclosures (GL9SUSD + GL9XUSD)</h2>
+
+      <h3>GODLEVEL9 Stablecoin Risk Disclosures</h3>
+      <p><b>Applies to GL9SUSD (Septillion Series) and GL9XUSD (Sextillion Series)</b></p>
+      <p>
+        Stablecoins are designed for stability, but no system is risk-free. This page explains the key risks in plain language.
+      </p>
+      <p><b>Not financial advice.</b> Users should evaluate risks, local laws, and their own circumstances before using any token.</p>
+
+      <h3>1) Redemption & Liquidity Risk</h3>
+      <p>Even with reserve backing, redemption can face delays due to:</p>
+      <ul>
+        <li>banking hours and settlement cutoffs</li>
+        <li>elevated redemption demand (“run” conditions)</li>
+        <li>compliance reviews</li>
+        <li>operational outages</li>
+      </ul>
+      <p>Redemption timelines and eligibility rules are defined in the Redemption Policy.</p>
+
+      <h3>2) Custody / Bank Risk</h3>
+      <p>Reserves depend on third-party financial institutions:</p>
+      <ul>
+        <li>a bank or custodian may restrict access</li>
+        <li>institutions can fail or face regulatory action</li>
+        <li>payment rails can experience outages</li>
+      </ul>
+      <p>These events may temporarily impact redemption speed.</p>
+
+      <h3>3) Regulatory & Legal Risk</h3>
+      <p>Stablecoin rules vary by jurisdiction and can change.</p>
+      <ul>
+        <li>certain countries may restrict stablecoin use</li>
+        <li>exchanges may delist due to compliance requirements</li>
+        <li>redemption availability may be limited in restricted jurisdictions</li>
+      </ul>
+      <p>Users are responsible for complying with local laws.</p>
+
+      <h3>4) Compliance Risk (KYC/AML/Sanctions)</h3>
+      <p>Redemption and certain services may require:</p>
+      <ul>
+        <li>identity verification (KYC/KYB)</li>
+        <li>sanctions screening</li>
+        <li>transaction monitoring</li>
+        <li>enhanced due diligence for high-risk cases</li>
+      </ul>
+      <p>This can lead to delays or refusal where prohibited activity is suspected or where legal requirements apply.</p>
+
+      <h3>5) Market Price Deviation Risk</h3>
+      <p>Even if a stablecoin targets $1, secondary market prices can deviate due to:</p>
+      <ul>
+        <li>liquidity conditions</li>
+        <li>exchange order book depth</li>
+        <li>market stress events</li>
+        <li>redemption access limitations for certain users</li>
+      </ul>
+      <p>A temporary deviation does not necessarily mean reserves are missing, but it can occur.</p>
+
+      <h3>6) Smart Contract & Technical Risk</h3>
+      <p>On-chain tokens rely on software:</p>
+      <ul>
+        <li>contract vulnerabilities can be exploited</li>
+        <li>integrations (bridges, wallets, exchanges) can fail</li>
+        <li>chain congestion can raise fees or delay transfers</li>
+      </ul>
+      <p>Mitigations may include audits, cautious upgrade policies, and emergency pause functions.</p>
+
+      <h3>7) Operational & Governance Risk</h3>
+      <p>Stablecoin operations involve people and procedures:</p>
+      <ul>
+        <li>human error</li>
+        <li>internal control failure</li>
+        <li>key management incidents</li>
+        <li>fraud attempts</li>
+      </ul>
+      <p>Mitigations include access controls, multi-approval workflows, monitoring, and incident response plans.</p>
+
+      <h3>8) Attestation / Reporting Limitations</h3>
+      <p>Attestations (if provided) are snapshots:</p>
+      <ul>
+        <li>they confirm reserves as of specific dates</li>
+        <li>they do not eliminate all risk</li>
+        <li>reporting depends on data sources and valuation methods</li>
+      </ul>
+      <p>Users should review the methodology and timing of reports.</p>
+
+      <h3>9) Force Majeure & Extraordinary Events</h3>
+      <p>Events outside control may affect operations:</p>
+      <ul>
+        <li>systemwide banking disruptions</li>
+        <li>cyberattacks on critical vendors</li>
+        <li>government or court orders</li>
+        <li>war, sanctions expansions, or market freezes</li>
+      </ul>
+      <p>These events may cause delays, pauses, or restrictions.</p>
+
+      <h3>10) No Guarantee of Universal Access</h3>
+      <p>Access can vary by:</p>
+      <ul>
+        <li>jurisdiction</li>
+        <li>exchange support</li>
+        <li>wallet or platform availability</li>
+        <li>compliance eligibility</li>
+      </ul>
+      <p>Users may not have the same redemption path in every region.</p>
+
+      <h3>11) Series Separation Risk (GL9SUSD vs GL9XUSD)</h3>
+      <p>GL9SUSD and GL9XUSD are separate series:</p>
+      <ul>
+        <li>each has its own reserve bucket and reporting</li>
+        <li>redemption must be requested for the correct token</li>
+        <li>limits or rules may differ by series (always disclosed if so)</li>
+      </ul>
+
+      <h3>12) Versioning</h3>
+      <ul>
+        <li>Disclosure Version: v*(#)*</li>
+        <li>Effective Date: (YYYY-MM-DD)</li>
+        <li>Last Updated: (YYYY-MM-DD)</li>
+      </ul>
+    </div>
+
+    <!-- ======================================================
+    SHARED PAGE — COMPLIANCE OVERVIEW
+    ======================================================= -->
+    <div class="gl9-section" id="page-compliance">
+      <h2>Shared Page — Compliance Overview (GL9SUSD + GL9XUSD)</h2>
+
+      <h3>GODLEVEL9 Stablecoin Compliance Program</h3>
+      <p><b>Applies to GL9SUSD (Septillion Series) and GL9XUSD (Sextillion Series)</b></p>
+      <p>
+        This page summarizes how GL9SUSD and GL9XUSD are operated with a compliance framework suitable for
+        public stablecoin issuance and redemption. The goal is simple:
+      </p>
+      <ul>
+        <li>protect holders</li>
+        <li>prevent illicit use</li>
+        <li>keep banking and redemption rails functional</li>
+        <li>meet legal obligations where the program operates</li>
+      </ul>
+      <p>Note: Requirements vary by jurisdiction. Access to minting/redemption may be limited or unavailable in restricted regions.</p>
+
+      <h3>1) What This Compliance Program Covers</h3>
+      <p>This program applies to:</p>
+      <ul>
+        <li>Direct minting (issuer-side issuance to verified users/institutions)</li>
+        <li>Direct redemption (issuer-side cash-out at par under policy terms)</li>
+        <li>Issuer-controlled operations (reserve flows, banking rails, reporting)</li>
+      </ul>
+      <p>This program does not necessarily apply to:</p>
+      <ul>
+        <li>secondary market trading between third parties (which may occur on platforms that list the token), though sanctioned or prohibited addresses may be restricted where legally required.</li>
+      </ul>
+
+      <h3>2) Identity Verification (KYC / KYB)</h3>
+      <p>To access direct minting or redemption, users must complete verification.</p>
+      <p><b>Individuals (KYC)</b></p>
+      <ul>
+        <li>Government-issued ID verification</li>
+        <li>Basic identity checks</li>
+        <li>Risk screening</li>
+      </ul>
+      <p><b>Businesses (KYB)</b></p>
+      <ul>
+        <li>Entity registration validation</li>
+        <li>Ownership/beneficial owner checks (where applicable)</li>
+        <li>Authorized signatory verification</li>
+        <li>Risk screening</li>
+      </ul>
+      <p><b>Why this exists</b></p>
+      <ul>
+        <li>Prevents fraud and abuse</li>
+        <li>Supports banking and payment partner requirements</li>
+        <li>Helps satisfy legal obligations in many jurisdictions</li>
+      </ul>
+
+      <h3>3) Sanctions Screening</h3>
+      <p>I screen users and transactions against sanctions and prohibited-party lists, consistent with applicable law.</p>
+      <p>This can include:</p>
+      <ul>
+        <li>screening at onboarding</li>
+        <li>ongoing screening for changes</li>
+        <li>screening at redemption/mint time</li>
+        <li>screening of high-risk transaction patterns</li>
+      </ul>
+      <p>If sanctions risk is detected:</p>
+      <ul>
+        <li>access may be denied</li>
+        <li>redemptions may be refused</li>
+        <li>accounts may be suspended</li>
+        <li>reporting may occur where required</li>
+      </ul>
+
+      <h3>4) AML Controls (Anti–Money Laundering)</h3>
+      <p>I maintain AML controls to detect and prevent illicit finance.</p>
+      <p>Controls include:</p>
+      <ul>
+        <li>transaction monitoring</li>
+        <li>velocity and volume analysis</li>
+        <li>pattern detection for suspicious behavior</li>
+        <li>enhanced due diligence for higher-risk users</li>
+        <li>investigation and escalation workflows</li>
+      </ul>
+      <p>If a transaction is flagged:</p>
+      <ul>
+        <li>it may be delayed for review</li>
+        <li>additional information may be requested</li>
+        <li>redemption may be refused where required</li>
+      </ul>
+
+      <h3>5) Source-of-Funds / Source-of-Wealth (When Required)</h3>
+      <p>For larger redemptions or higher risk categories, I may request:</p>
+      <ul>
+        <li>proof of source-of-funds (bank statements, business revenue records, etc.)</li>
+        <li>source-of-wealth explanations (how funds were obtained)</li>
+      </ul>
+      <p>This is used for:</p>
+      <ul>
+        <li>fraud prevention</li>
+        <li>risk management</li>
+        <li>meeting legal or partner compliance standards</li>
+      </ul>
+
+      <h3>6) Prohibited Activity</h3>
+      <p>I do not support activity involving:</p>
+      <ul>
+        <li>sanctioned entities or jurisdictions (as applicable)</li>
+        <li>fraud, theft, or scam proceeds</li>
+        <li>terrorist financing</li>
+        <li>child exploitation material or related transactions</li>
+        <li>trafficking-related proceeds</li>
+        <li>ransomware payments (where prohibited)</li>
+        <li>laundering attempts through structured redemptions</li>
+      </ul>
+      <p>If prohibited activity is suspected, actions may include:</p>
+      <ul>
+        <li>account freeze/suspension</li>
+        <li>refusal of service/redemption</li>
+        <li>reporting where legally required</li>
+      </ul>
+
+      <h3>7) Data Handling & Retention</h3>
+      <p>I collect only what is needed to operate safely and lawfully.</p>
+      <p><b>Data types may include</b></p>
+      <ul>
+        <li>identity verification data (KYC/KYB)</li>
+        <li>transaction logs and redemption records</li>
+        <li>compliance review notes</li>
+        <li>banking payout details for redemptions</li>
+      </ul>
+      <p><b>Retention</b></p>
+      <ul>
+        <li>retained for a defined period required by policy/law/partner standards</li>
+        <li>secure storage practices are used</li>
+        <li>access is restricted internally</li>
+      </ul>
+
+      <h3>8) Appeals & Dispute Process</h3>
+      <p>If a user is denied redemption or access due to compliance review, I provide a process for:</p>
+      <ul>
+        <li>requesting reconsideration (where allowed)</li>
+        <li>submitting clarifying documentation</li>
+        <li>escalating disputes through support/compliance channels</li>
+      </ul>
+      <p>Some cases may not allow disclosure of the reason due to legal restrictions.</p>
+
+      <h3>9) Monitoring, Audits, and Internal Controls</h3>
+      <p>I operate internal controls to reduce operational risk:</p>
+      <ul>
+        <li>role-based access controls (least privilege)</li>
+        <li>multi-approval workflows for reserve movements</li>
+        <li>logging and audit trails</li>
+        <li>periodic internal reviews</li>
+        <li>incident response procedures</li>
+      </ul>
+
+      <h3>10) Jurisdictional Limitations</h3>
+      <p>Stablecoin services may not be available everywhere. I may restrict access based on:</p>
+      <ul>
+        <li>residency or location</li>
+        <li>local regulation</li>
+        <li>banking partner coverage</li>
+        <li>sanctions requirements</li>
+      </ul>
+
+      <h3>11) Contact</h3>
+      <ul>
+        <li>Support: (support email)</li>
+        <li>Compliance: (compliance email)</li>
+        <li>Disputes/Appeals: (appeals email or form link)</li>
+      </ul>
+
+      <h3>12) Versioning</h3>
+      <ul>
+        <li>Compliance Program Version: v*(#)*</li>
+        <li>Effective Date: (YYYY-MM-DD)</li>
+        <li>Last Updated: (YYYY-MM-DD)</li>
+      </ul>
+    </div>
+
+    <!-- ======================================================
+    SHARED PAGE — PROGRAM TERMS (TEMPLATE)
+    ======================================================= -->
+    <div class="gl9-section" id="page-terms">
+      <h2>Shared Page — Stablecoin Program Terms (Template)</h2>
+
+      <h3>GODLEVEL9 Stablecoin Program Terms</h3>
+      <p><b>Applies to GL9SUSD and GL9XUSD</b></p>
+      <p>
+        This Terms page is a template for the stablecoin program. It ties together:
+      </p>
+      <ul>
+        <li>Reserve Policy</li>
+        <li>Redemption Policy</li>
+        <li>Transparency Dashboard</li>
+        <li>Risk Disclosures</li>
+        <li>Compliance Overview</li>
+      </ul>
+      <p><b>This is a draft template for program operations and should be reviewed by legal counsel before publication.</b></p>
+
+      <h3>1) Definitions</h3>
+      <ul>
+        <li>“Issuer” means the GODLEVEL9 Reserve stablecoin program operator.</li>
+        <li>“Tokens” means GL9SUSD and GL9XUSD.</li>
+        <li>“User” means any person or entity interacting with issuer services (mint/redemption).</li>
+        <li>“Direct Redemption” means redemption through issuer-controlled rails.</li>
+        <li>“Reserves” means eligible reserve assets held under the Reserve Policy.</li>
+      </ul>
+
+      <h3>2) Program Description</h3>
+      <p>GL9SUSD and GL9XUSD are USD-pegged stablecoin series designed to:</p>
+      <ul>
+        <li>maintain reserve-backed issuance discipline</li>
+        <li>offer par redemption to eligible users under published policies</li>
+        <li>publish transparency reporting and disclosures</li>
+      </ul>
+
+      <h3>3) Eligibility</h3>
+      <p>Issuer services (minting/redemption) may require:</p>
+      <ul>
+        <li>KYC/KYB verification</li>
+        <li>sanctions screening</li>
+        <li>ongoing compliance monitoring</li>
+        <li>eligibility by jurisdiction</li>
+      </ul>
+      <p>Users may be denied service if they fail eligibility or compliance requirements.</p>
+
+      <h3>4) Minting (Issuer-Side)</h3>
+      <ul>
+        <li>Tokens are minted only under the issuer’s reserve-linked issuance rules.</li>
+        <li>Issuer may refuse minting requests based on compliance, fraud risk, or legal requirements.</li>
+        <li>Minting availability may vary by jurisdiction and partner coverage.</li>
+      </ul>
+
+      <h3>5) Redemption (Issuer-Side)</h3>
+      <ul>
+        <li>Eligible users may request redemption at par under the Redemption Policy.</li>
+        <li>Redemption processing time may vary due to banking hours, review requirements, and system load.</li>
+        <li>Issuer may delay or refuse redemption in compliance-related or legally restricted scenarios.</li>
+      </ul>
+
+      <h3>6) Fees</h3>
+      <ul>
+        <li>Fees, if any, are disclosed in the Redemption Policy.</li>
+        <li>Bank wire/rail fees may be passed through where disclosed.</li>
+      </ul>
+
+      <h3>7) Compliance Requirements</h3>
+      <p>Users agree to:</p>
+      <ul>
+        <li>provide accurate information</li>
+        <li>complete KYC/KYB when required</li>
+        <li>not use tokens for prohibited activity</li>
+        <li>comply with applicable laws and sanctions rules</li>
+      </ul>
+      <p>Issuer may:</p>
+      <ul>
+        <li>monitor transactions</li>
+        <li>request additional information</li>
+        <li>suspend or terminate access</li>
+        <li>report activity where legally required</li>
+      </ul>
+
+      <h3>8) Disclosures and No Advice</h3>
+      <ul>
+        <li>Nothing on the site is financial, legal, or tax advice.</li>
+        <li>Stablecoins involve risks described in the Risk Disclosures page.</li>
+        <li>Users are responsible for complying with local law.</li>
+      </ul>
+
+      <h3>9) Technology and Smart Contract Risk</h3>
+      <p>Tokens depend on:</p>
+      <ul>
+        <li>blockchain network performance</li>
+        <li>third-party integrations (wallets, exchanges, bridges)</li>
+        <li>smart contract security</li>
+      </ul>
+      <p>Issuer may:</p>
+      <ul>
+        <li>pause certain functions to protect users</li>
+        <li>upgrade contracts (if upgradeability is used) with disclosure and notice policies</li>
+      </ul>
+
+      <h3>10) Limitation of Liability (Template)</h3>
+      <p>To the extent permitted by law:</p>
+      <ul>
+        <li>issuer is not liable for losses caused by factors outside its control (network outages, banking failures, force majeure)</li>
+        <li>issuer is not liable for third-party platform failures (exchanges, wallets)</li>
+      </ul>
+      <p>(Exact language should be finalized by counsel.)</p>
+
+      <h3>11) Changes to Policies</h3>
+      <p>Issuer may update:</p>
+      <ul>
+        <li>Reserve Policy</li>
+        <li>Redemption Policy</li>
+        <li>Compliance Program</li>
+        <li>Risk Disclosures</li>
+      </ul>
+      <p>All changes are versioned and effective dates are published.</p>
+
+      <h3>12) Governing Law / Dispute Resolution (Placeholder)</h3>
+      <ul>
+        <li>Governing law: (jurisdiction)</li>
+        <li>Dispute resolution: (courts/arbitration)</li>
+        <li>Venue: (location)</li>
+      </ul>
+
+      <h3>13) Contact</h3>
+      <ul>
+        <li>Support: (support email)</li>
+        <li>Compliance: (compliance email)</li>
+        <li>Legal: (legal email)</li>
+      </ul>
+
+      <h3>14) Versioning</h3>
+      <ul>
+        <li>Terms Version: v*(#)*</li>
+        <li>Effective Date: (YYYY-MM-DD)</li>
+        <li>Last Updated: (YYYY-MM-DD)</li>
+      </ul>
+
+      <div class="gl9-note">
+        <b>Series separation:</b> GL9SUSD and GL9XUSD are separate stablecoin series.
+        Each is designed with separate reserve buckets, separate reporting, and separate attestations,
+        while maintaining one integrity standard.
+      </div>
+    </div>
+
+    <!-- Footer disclosure -->
+    <div class="gl9-footer">
+      <b>Disclosure Notice (Draft):</b><br />
+      GL9SUSD and GL9XUSD are designed as USD-pegged stablecoin series with reserve and redemption policies.
+      Availability, redemption access, and supported jurisdictions may vary based on legal requirements.
+      Nothing on this page is financial advice. Terms, disclosures, and policies are published and updated as the program evolves.
+    </div>
+
+    <noscript>
+      <div class="gl9-nojs">
+        JavaScript is disabled. On-chain supply links and dashboard widgets may not display.
+      </div>
+    </noscript>
+
+  </div>
+</div>
+
+<!-- =========================
+Optional JS helpers (safe)
+========================= -->
+<script>
+  (function () {
+    window.GL9 = window.GL9 || {};
+    window.GL9.track = function (eventName, data) {
+      try { console.log("[GL9 Track]", eventName, data || {}); } catch (e) {}
+    };
+  })();
+</script>
+
+<!-- =========================
+Placeholder Guard (remove later)
+========================= -->
+<script>
+  (function () {
+    var placeholders = [
+      "YOURDOMAIN.COM",
+      "(support email)",
+      "(compliance email)",
+      "(legal email)",
+      "(address)",
+      "(PDF link)",
+      "(YYYY-MM-DD)",
+      "0xGL9SUSD_CONTRACT",
+      "0xGL9XUSD_CONTRACT"
+    ];
+    var html = document.documentElement.innerHTML || "";
+    var found = placeholders.filter(function (p) { return html.indexOf(p) !== -1; });
+    if (found.length) {
+      try { console.warn("[GL9] Replace placeholders before publishing:", found); } catch (e) {}
+    }
+  })();
+</script><!-- =========================================================
+GODLEVEL9 USD Stablecoin Program — MASTER CUSTOM CODE (ALL PAGES IN ONE)
+Paste into a Custom Code/Embed block that renders HTML in the BODY.
+If your builder only allows HEAD code, keep the META/OG/TW/JSON-LD/STYLE parts
+in the Header/Head area, and paste the <div id="gl9-program">…</div> body later.
+========================================================== -->
+
+<!-- =========================
+HEAD / SEO (safe in <head>)
+========================= -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GODLEVEL9 USD Stablecoin Program</title>
+<meta
+  name="description"
+  content="GL9SUSD (Septillion Series) and GL9XUSD (Sextillion Series) — public stablecoin program pages including reserves, redemption at par, AML/KYC compliance, attestations/reporting, transparency dashboard, reserve policy, redemption policy, risk disclosures, compliance overview, and program terms."
+/>
+<meta name="robots" content="index,follow" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<meta name="theme-color" content="#0b0b0b" />
+
+<!-- Canonical (REPLACE) -->
+<link rel="canonical" href="https://YOURDOMAIN.COM/godlevel9-usd-stablecoin-program" />
+
+<!-- Open Graph (REPLACE URLs + image) -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="GODLEVEL9 USD Stablecoin Program" />
+<meta
+  property="og:description"
+  content="Two USD-pegged stablecoin series: GL9SUSD (Septillion Series) and GL9XUSD (Sextillion Series) — reserves, redemption, compliance, attestations, and transparency."
+/>
+<meta property="og:url" content="https://YOURDOMAIN.COM/godlevel9-usd-stablecoin-program" />
+<meta property="og:site_name" content="GODLEVEL9 Reserve Authority" />
+<meta property="og:image" content="https://YOURDOMAIN.COM/assets/og-godlevel9-stablecoin.png" />
+
+<!-- Twitter Card (REPLACE image) -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="GODLEVEL9 USD Stablecoin Program" />
+<meta
+  name="twitter:description"
+  content="GL9SUSD + GL9XUSD — reserve-backed USD stablecoin series with redemption, compliance, proof-of-reserves reporting, and disclosures."
+/>
+<meta name="twitter:image" content="https://YOURDOMAIN.COM/assets/og-godlevel9-stablecoin.png" />
+
+<!-- =========================
+STYLE (Vault-class black/gold)
+========================= -->
+<style>
+  :root {
+    --bg: #0b0b0b;
+    --fg: #f2f2f2;
+    --muted: #b8b8b8;
+    --gold: #c9a227;
+    --panel: rgba(255,255,255,0.035);
+    --panel2: rgba(255,255,255,0.055);
+    --border: rgba(201,162,39,0.28);
+    --border2: rgba(255,255,255,0.12);
+    --radius: 16px;
+    --radius2: 12px;
+    --shadow: 0 12px 34px rgba(0,0,0,0.55);
+    --max: 1100px;
+  }
+
+  /* Container */
+  #gl9-program {
+    background: transparent;
+    color: var(--fg);
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  }
+
+  .gl9-wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 18px;
+  }
+
+  /* Hero */
+  .gl9-hero {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(201,162,39,0.08), rgba(255,255,255,0.03));
+    box-shadow: var(--shadow);
+    padding: 18px 16px;
+  }
+
+  .gl9-badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border: 1px solid rgba(201,162,39,.35);
+    border-radius: 999px;
+    color: var(--fg);
+    background: rgba(201,162,39,.08);
+    font-size: 12px;
+    letter-spacing: .3px;
+  }
+
+  .gl9-title {
+    margin: 10px 0 6px 0;
+    font-size: 24px;
+    letter-spacing: 0.2px;
+  }
+
+  .gl9-sub {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.55;
+    font-size: 14px;
+  }
+
+  /* Nav pills */
+  .gl9-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .gl9-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.04);
+    font-size: 12px;
+    color: var(--fg);
+    text-decoration: none;
+  }
+  .gl9-pill:hover { border-color: rgba(201,162,39,0.45); }
+
+  /* Sections */
+  .gl9-section {
+    margin-top: 14px;
+    border: 1px solid rgba(255,255,255,0.10);
+    background: rgba(255,255,255,0.03);
+    border-radius: var(--radius2);
+    padding: 14px;
+  }
+  .gl9-section h2 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+  }
+  .gl9-section h3 {
+    margin: 14px 0 8px 0;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+  }
+  .gl9-section p, .gl9-section li {
+    color: var(--muted);
+    line-height: 1.6;
+    font-size: 13px;
+  }
+  .gl9-section ul {
+    margin: 10px 0 0 18px;
+    padding: 0;
+  }
+
+  /* Cards */
+  .gl9-grid {
+    display: grid;
+    gap: 14px;
+    margin-top: 14px;
+  }
+  @media (min-width: 860px) {
+    .gl9-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .gl9-card {
+    border: 1px solid var(--border2);
+    border-radius: var(--radius2);
+    background: var(--panel);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.45);
+    padding: 14px;
+  }
+  .gl9-card h3 { margin: 0 0 10px 0; font-size: 15px; }
+
+  .gl9-kv {
+    display: grid;
+    gap: 8px;
+  }
+  .gl9-kv div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: 1px dashed rgba(255,255,255,0.10);
+    padding-bottom: 6px;
+  }
+  .gl9-kv span { color: var(--muted); font-size: 12px; }
+  .gl9-kv b { color: var(--fg); font-size: 12px; text-align: right; }
+
+  .gl9-note {
+    border-left: 3px solid var(--gold);
+    padding: 10px 12px;
+    margin: 12px 0 0 0;
+    color: var(--muted);
+    background: rgba(255,255,255,.03);
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .gl9-hr { height: 1px; background: rgba(255,255,255,0.08); margin: 12px 0; }
+
+  .gl9-link {
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(201,162,39,0.35);
+  }
+  .gl9-link:hover { opacity: 0.9; }
+
+  /* Table */
+  .gl9-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .gl9-table th, .gl9-table td {
+    border: 1px solid rgba(255,255,255,0.10);
+    padding: 10px;
+    font-size: 12px;
+    vertical-align: top;
+  }
+  .gl9-table th {
+    background: rgba(201,162,39,0.08);
+    color: var(--fg);
+    text-align: left;
+  }
+  .gl9-table td { color: var(--muted); }
+
+  /* Footer */
+  .gl9-footer {
+    margin-top: 16px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.10);
+    background: rgba(255,255,255,0.03);
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .gl9-nojs {
+    padding: 10px 12px;
+    background: rgba(255,255,255,.05);
+    color: #eaeaea;
+    border-left: 3px solid var(--gold);
+    border-radius: 10px;
+    margin-top: 12px;
+  }
+</style>
+
+<!-- =========================
+JSON-LD Structured Data
+========================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "GODLEVEL9 USD Stablecoin Program",
+  "description": "GL9SUSD (Septillion Series) and GL9XUSD (Sextillion Series) — reserves, redemption at par, compliance, attestations/reporting, transparency dashboard, and disclosures.",
+  "url": "https://YOURDOMAIN.COM/godlevel9-usd-stablecoin-program",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "GODLEVEL9 Reserve Authority",
+    "url": "https://YOURDOMAIN.COM"
+  },
+  "about": [
+    {
+      "@type": "FinancialProduct",
+      "name": "GL9SUSD",
+      "description": "USD-pegged stablecoin series (Septillion Series). 1 token = $1 redemption under published terms.",
+      "category": "Stablecoin"
+    },
+    {
+      "@type": "FinancialProduct",
+      "name": "GL9XUSD",
+      "description": "USD-pegged stablecoin series (Sextillion Series). 1 token = $1 redemption under published terms.",
+      "category": "Stablecoin"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "GODLEVEL9 Reserve Authority"
+  }
+}
+</script>
+
+<!-- =========================
+BODY CONTENT (all pages combined)
+========================= -->
+<div id="gl9-program">
+  <div class="gl9-wrap">
+
+    <!-- Program Hero -->
+    <div class="gl9-hero">
+      <span class="gl9-badge">Public Launch Spec — Reserves + Redemption + Compliance + Reporting</span>
+      <h1 class="gl9-title">GODLEVEL9 USD Stablecoin Program</h1>
+      <p class="gl9-sub">
+        This page contains the full public program copy for two USD-pegged stablecoin series:
+        <b>GL9SUSD (Septillion Series)</b> and <b>GL9XUSD (Sextillion Series)</b> — plus the shared
+        Transparency Dashboard, Redemption Policy, Reserve Policy, Risk Disclosures, Compliance Overview, and Program Terms.
+      </p>
+
+      <div class="gl9-nav">
+        <a class="gl9-pill" href="#page-gl9susd">Landing: GL9SUSD</a>
+        <a class="gl9-pill" href="#page-gl9xusd">Landing: GL9XUSD</a>
+        <a class="gl9-pill" href="#page-transparency">Transparency Dashboard</a>
+        <a class="gl9-pill" href="#page-redemption">Redemption Policy</a>
+        <a class="gl9-pill" href="#page-reserve">Reserve Policy</a>
+        <a class="gl9-pill" href="#page-risk">Risk Disclosures</a>
+        <a class="gl9-pill" href="#page-compliance">Compliance Overview</a>
+        <a class="gl9-pill" href="#page-terms">Program Terms</a>
+      </div>
+
+      <div class="gl9-note">
+        <b>Public launch requirement:</b> If you publicly claim “stablecoin” + “redeemable $1,”
+        the reserve custody, redemption rails, compliance program, and reporting cadence should be truly in place.
+        Until fully live, keep claims framed as <b>policy + commitment</b> and publish effective dates/versioning.
+      </div>
+    </div>
+
+    <!-- Quick Spec Cards -->
+    <div class="gl9-grid">
+      <div class="gl9-card">
+        <h3>GL9SUSD — Septillion Series (Quick Spec)</h3>
+        <div class="gl9-kv">
+          <div><span>Name</span><b>GODLEVEL9 Septillion USD</b></div>
+          <div><span>Symbol</span><b>GL9SUSD</b></div>
+          <div><span>Peg</span><b>1 GL9SUSD = $1.00 USD</b></div>
+          <div><span>Series Cap</span><b>2,000,000,000,000,000,000,000,000</b></div>
+          <div><span>Decimals</span><b>18</b></div>
+          <div><span>Network</span><b>Base / Ethereum / Multi-chain (set at deployment)</b></div>
+        </div>
+      </div>
+
+      <div class="gl9-card">
+        <h3>GL9XUSD — Sextillion Series (Quick Spec)</h3>
+        <div class="gl9-kv">
+          <div><span>Name</span><b>GODLEVEL9 Sextillion USD</b></div>
+          <div><span>Symbol</span><b>GL9XUSD</b></div>
+          <div><span>Peg</span><b>1 GL9XUSD = $1.00 USD</b></div>
+          <div><span>Series Cap</span><b>1,500,000,000,000,000,000,000</b></div>
+          <div><span>Decimals</span><b>18</b></div>
+          <div><span>Network</span><b>Base / Ethereum / Multi-chain (set at deployment)</b></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================
+    LANDING PAGE 1 — GL9SUSD
+    ======================================================= -->
+    <div class="gl9-section" id="page-gl9susd">
+      <h2>Landing Page — GL9SUSD (Septillion Series)</h2>
+
+      <h3>GODLEVEL9 Septillion USD</h3>
+      <p><b>GL9SUSD — USD-Pegged Stablecoin (Septillion Series)</b></p>
+      <p><b>1 GL9SUSD = $1.00 USD</b> (redeemable at par under published terms)</p>
+
+      <p>
+        <b>Series Cap:</b> 2,000,000,000,000,000,000,000,000 GL9SUSD<br />
+        <b>Network:</b> (Base / Ethereum / Multi-chain — set at deployment)<br />
+        <b>Decimals:</b> 18
+      </p>
+
+      <div class="gl9-hr"></div>
+
+      <h3>What GL9SUSD Is</h3>
+      <p>
+        GL9SUSD is the Septillion Series USD stablecoin under the GODLEVEL9 Reserve framework.
+        It is designed for public use with the core pillars that make a stablecoin real:
+      </p>
+      <ul>
+        <li>Reserves</li>
+        <li>Redemption</li>
+        <li>Compliance</li>
+        <li>Transparency</li>
+      </ul>
+      <p>
+        GL9SUSD is issued only when reserves are received, and burned when tokens are redeemed,
+        so circulating supply stays aligned with reserve backing.
+      </p>
+
+      <h3>How the Peg Works (Simple)</h3>
+      <p><b>Circulating GL9SUSD never exceeds verified reserves.</b></p>
+      <ul>
+        <li>Reserves received → GL9SUSD minted</li>
+        <li>GL9SUSD redeemed → GL9SUSD burned</li>
+        <li>Supply + reserve reporting published on schedule</li>
+      </ul>
+      <p>This structure is intended to keep the peg defendable under scrutiny.</p>
+
+      <h3>Reserve Policy (Backing)</h3>
+      <p>GL9SUSD is designed to be fully backed by high-liquidity reserve assets.</p>
+      <p><b>Reserve target</b></p>
+      <ul>
+        <li>≥ 100% backing relative to circulating supply (measured routinely)</li>
+      </ul>
+      <p><b>Eligible reserve assets (conservative set)</b></p>
+      <ul>
+        <li>Cash held at regulated banking partners</li>
+        <li>Short-dated U.S. Treasury bills (or comparable high-liquidity equivalents)</li>
+        <li>Cash-equivalent instruments designed for same/next-day liquidity</li>
+      </ul>
+      <p><b>Custody & segregation</b></p>
+      <ul>
+        <li>Reserves held segregated from operating funds</li>
+        <li>Controls include reconciliations, approvals, and audit trails</li>
+        <li>Custody partners and reserve composition are disclosed in reporting</li>
+      </ul>
+
+      <h3>Minting & Burning Controls</h3>
+      <ul>
+        <li>Minting is restricted to authorized issuer controls</li>
+        <li>Burning occurs on redemption to remove supply</li>
+        <li>Emergency pause capability to protect holders during incidents</li>
+        <li>Optional compliance controls may include whitelisting/blacklisting based on legal requirements</li>
+      </ul>
+
+      <h3>Redemption (How Holders Cash Out)</h3>
+      <p><b>1 GL9SUSD → $1.00 USD</b> under published redemption terms.</p>
+      <p>The public redemption policy defines:</p>
+      <ul>
+        <li>Who can redeem directly (typically KYC-verified customers)</li>
+        <li>Processing windows (same-day/next-day where feasible)</li>
+        <li>Minimums/maximums (if applicable)</li>
+        <li>Fees (if any) and clear calculations</li>
+        <li>Refusal conditions (sanctions/AML, fraud, legal restrictions)</li>
+      </ul>
+
+      <h3>Compliance (Public Launch Standard)</h3>
+      <p>GL9SUSD is operated with a compliance framework suitable for a public stablecoin issuer:</p>
+      <ul>
+        <li>Customer identity verification (KYC) for direct mint/redemption</li>
+        <li>Sanctions screening and risk scoring</li>
+        <li>Transaction monitoring and escalation workflows</li>
+        <li>Recordkeeping, audit trails, incident response</li>
+        <li>Formal policies: AML policy, sanctions policy, risk policy, cybersecurity controls</li>
+      </ul>
+
+      <h3>Transparency (Proof-of-Reserves)</h3>
+      <p>GL9SUSD is supported with a reporting framework that includes:</p>
+      <ul>
+        <li>Circulating supply (on-chain)</li>
+        <li>Reserve totals and reserve composition (category reporting)</li>
+        <li>Custody framework statement</li>
+        <li>Independent attestation / examination schedule (where applicable)</li>
+        <li>Material event reporting (custody changes, redemption disruptions, incidents)</li>
+      </ul>
+
+      <h3>Risks & Disclosures</h3>
+      <p>I disclose risks clearly so the public understands reality:</p>
+      <ul>
+        <li>Custody/bank risk</li>
+        <li>Redemption timing risk during spikes/outages/legal holds</li>
+        <li>Regulatory risk (jurisdictional rule changes)</li>
+        <li>Smart contract and integration risk</li>
+        <li>Secondary market deviations from $1 can occur even with redemption</li>
+      </ul>
+
+      <h3>GL9SUSD Quick Specs (Copy/Paste)</h3>
+      <ul>
+        <li>Name: GODLEVEL9 Septillion USD</li>
+        <li>Symbol: GL9SUSD</li>
+        <li>Peg: 1 token = $1.00 USD (redemption at par under terms)</li>
+        <li>Supply Cap: 2,000,000,000,000,000,000,000,000</li>
+        <li>Decimals: 18</li>
+        <li>Series: Septillion Series (macro reserve bucket)</li>
+      </ul>
+    </div>
+
+    <!-- ======================================================
+    LANDING PAGE 2 — GL9XUSD
+    ======================================================= -->
+    <div class="gl9-section" id="page-gl9xusd">
+      <h2>Landing Page — GL9XUSD (Sextillion Series)</h2>
+
+      <h3>GODLEVEL9 Sextillion USD</h3>
+      <p><b>GL9XUSD — USD-Pegged Stablecoin (Sextillion Series)</b></p>
+      <p><b>1 GL9XUSD = $1.00 USD</b> (redeemable at par under published terms)</p>
+
+      <p>
+        <b>Series Cap:</b> 1,500,000,000,000,000,000,000 GL9XUSD<br />
+        <b>Network:</b> (Base / Ethereum / Multi-chain — set at deployment)<br />
+        <b>Decimals:</b> 18
+      </p>
+
+      <div class="gl9-hr"></div>
+
+      <h3>What GL9XUSD Is</h3>
+      <p>
+        GL9XUSD is the Sextillion Series USD stablecoin under the GODLEVEL9 Reserve framework.
+        It is a separate stablecoin series from GL9SUSD, with its own supply cap and reserve bucket, designed for public use.
+      </p>
+      <p>GL9XUSD follows the same real stablecoin pillars:</p>
+      <ul>
+        <li>Reserves</li>
+        <li>Redemption</li>
+        <li>Compliance</li>
+        <li>Transparency</li>
+      </ul>
+
+      <h3>Why Two Series?</h3>
+      <p>GL9XUSD exists separately to keep reserve accounting clean and modular:</p>
+      <ul>
+        <li>GL9SUSD = Septillion Series (macro reserve bucket)</li>
+        <li>GL9XUSD = Sextillion Series (secondary reserve bucket)</li>
+      </ul>
+      <p>Each series is designed to have:</p>
+      <ul>
+        <li>its own reserve accounts</li>
+        <li>its own disclosure reporting</li>
+        <li>its own attestation references</li>
+        <li>its own program terms if needed</li>
+      </ul>
+
+      <h3>How the Peg Works (Simple)</h3>
+      <p><b>Circulating GL9XUSD never exceeds verified reserves.</b></p>
+      <ul>
+        <li>Reserves received → GL9XUSD minted</li>
+        <li>GL9XUSD redeemed → GL9XUSD burned</li>
+        <li>Supply + reserve reporting published on schedule</li>
+      </ul>
+
+      <h3>Reserve Policy (Backing)</h3>
+      <p>GL9XUSD is designed to be fully backed by high-liquidity reserve assets.</p>
+      <p><b>Reserve target</b></p>
+      <ul>
+        <li>≥ 100% backing relative to circulating supply</li>
+      </ul>
+      <p><b>Eligible reserve assets (conservative set)</b></p>
+      <ul>
+        <li>Cash held at regulated banking partners</li>
+        <li>Short-dated U.S. Treasury bills (or comparable equivalents)</li>
+        <li>Cash-equivalent instruments designed for rapid liquidity</li>
+      </ul>
+      <p><b>Custody & segregation</b></p>
+      <ul>
+        <li>Reserves held segregated from operating funds</li>
+        <li>Reconciliation and audit trails maintained</li>
+        <li>Reserve composition and custody framework disclosed</li>
+      </ul>
+
+      <h3>Minting & Burning Controls</h3>
+      <ul>
+        <li>Restricted minting to authorized issuer controls</li>
+        <li>Burning on redemption to reduce supply</li>
+        <li>Emergency pause function</li>
+        <li>Optional compliance controls (whitelist/blacklist) if legally required</li>
+      </ul>
+
+      <h3>Redemption (How Holders Cash Out)</h3>
+      <p><b>1 GL9XUSD → $1.00 USD</b> under published redemption terms.</p>
+      <p>Redemption policy covers:</p>
+      <ul>
+        <li>Eligibility requirements (typically KYC for direct redemption)</li>
+        <li>Processing windows</li>
+        <li>Limits and fees if applicable</li>
+        <li>Conditions where redemption may be refused (sanctions/AML/fraud/legal)</li>
+      </ul>
+
+      <h3>Compliance (Public Launch Standard)</h3>
+      <p>GL9XUSD operates with a compliance program aligned to public stablecoin expectations:</p>
+      <ul>
+        <li>KYC for direct mint/redemption</li>
+        <li>Sanctions screening</li>
+        <li>Monitoring + incident response</li>
+        <li>Recordkeeping and audit trails</li>
+        <li>Policy framework: AML, sanctions, cybersecurity, fraud controls</li>
+      </ul>
+
+      <h3>Transparency (Proof-of-Reserves)</h3>
+      <p>Reporting includes:</p>
+      <ul>
+        <li>On-chain supply</li>
+        <li>Reserve totals and composition reporting</li>
+        <li>Custody framework statement</li>
+        <li>Attestation / examination schedule (where applicable)</li>
+        <li>Material events disclosure</li>
+      </ul>
+
+      <h3>Risks & Disclosures</h3>
+      <ul>
+        <li>Custody/bank risk</li>
+        <li>Redemption delays under stress/outages/legal holds</li>
+        <li>Regulatory changes by region</li>
+        <li>Contract and integration risk</li>
+        <li>Secondary market price may deviate temporarily from $1</li>
+      </ul>
+
+      <h3>GL9XUSD Quick Specs (Copy/Paste)</h3>
+      <ul>
+        <li>Name: GODLEVEL9 Sextillion USD</li>
+        <li>Symbol: GL9XUSD</li>
+        <li>Peg: 1 token = $1.00 USD (redemption at par under terms)</li>
+        <li>Supply Cap: 1,500,000,000,000,000,000,000</li>
+        <li>Decimals: 18</li>
+        <li>Series: Sextillion Series (secondary reserve bucket)</li>
+      </ul>
+
+      <div class="gl9-note">
+        <b>Legal / Disclosure Notice (Draft):</b><br />
+        GL9SUSD and GL9XUSD are designed as USD-pegged stablecoin series with reserve and redemption policies.
+        Availability, redemption access, and supported jurisdictions may vary based on legal requirements.
+        Nothing on this page is financial advice. Terms, disclosures, and policies are published and updated as the program evolves.
+      </div>
+    </div>
+
+    <!-- ======================================================
+    SHARED PAGE — TRANSPARENCY DASHBOARD
+    ======================================================= -->
+    <div class="gl9-section" id="page-transparency">
+      <h2>Shared Page — Transparency Dashboard (GL9SUSD + GL9XUSD)</h2>
+
+      <h3>GODLEVEL9 Stablecoin Transparency</h3>
+      <p><b>Live reporting for GL9SUSD (Septillion Series) + GL9XUSD (Sextillion Series)</b></p>
+      <p>This dashboard exists to make the two-series system auditable in plain language:</p>
+      <ul>
+        <li>On-chain supply is public</li>
+        <li>Reserves are reported</li>
+        <li>Redemption policies are published</li>
+        <li>Material events are disclosed</li>
+      </ul>
+
+      <h3>1) Live On-Chain Supply</h3>
+      <p>
+        GL9SUSD Circulating Supply: (auto / link to explorer)<br />
+        GL9XUSD Circulating Supply: (auto / link to explorer)
+      </p>
+
+      <p><b>Contracts</b></p>
+      <ul>
+        <li>GL9SUSD Contract: (address)</li>
+        <li>GL9XUSD Contract: (address)</li>
+      </ul>
+
+      <p><b>Core integrity rule</b></p>
+      <p>Circulating supply is designed to remain aligned with verified reserves under the published reserve policy.</p>
+
+      <h3>2) Reserve Summary (Latest Snapshot)</h3>
+      <p>Report Date: (YYYY-MM-DD)</p>
+
+      <h3>GL9SUSD Reserves (Septillion Series)</h3>
+      <ul>
+        <li>Total Reserves (USD): (number)</li>
+        <li>Circulating Supply (USD): (number)</li>
+        <li>Reserve Coverage Ratio: (e.g., 101.2%)</li>
+        <li>Reserve Location/Custody: (custodian/bank summary)</li>
+      </ul>
+
+      <h3>GL9XUSD Reserves (Sextillion Series)</h3>
+      <ul>
+        <li>Total Reserves (USD): (number)</li>
+        <li>Circulating Supply (USD): (number)</li>
+        <li>Reserve Coverage Ratio: (e.g., 100.4%)</li>
+        <li>Reserve Location/Custody: (custodian/bank summary)</li>
+      </ul>
+
+      <h3>3) Reserve Composition (Breakdown)</h3>
+      <p>I publish the reserve mix by category for each series.</p>
+
+      <h3>GL9SUSD Composition</h3>
+      <ul>
+        <li>Cash & Cash Equivalents: (%)</li>
+        <li>U.S. Treasuries (short-dated): (%)</li>
+        <li>Other Eligible Liquidity Instruments: (%)</li>
+        <li>Weighted Avg Maturity (if applicable): (days)</li>
+      </ul>
+
+      <h3>GL9XUSD Composition</h3>
+      <ul>
+        <li>Cash & Cash Equivalents: (%)</li>
+        <li>U.S. Treasuries (short-dated): (%)</li>
+        <li>Other Eligible Liquidity Instruments: (%)</li>
+        <li>Weighted Avg Maturity (if applicable): (days)</li>
+      </ul>
+
+      <h3>4) Attestations / Examinations</h3>
+      <p>
+        Independent Attestation Provider: (name)<br />
+        Cadence: (monthly / quarterly)
+      </p>
+      <p><b>Latest Reports</b></p>
+      <ul>
+        <li>GL9SUSD Attestation: (PDF link)</li>
+        <li>GL9XUSD Attestation: (PDF link)</li>
+        <li>Combined Methodology Notes: (PDF link)</li>
+      </ul>
+
+      <p><b>What an attestation covers</b></p>
+      <ul>
+        <li>Reserve existence (as of the report date)</li>
+        <li>Reserve valuation method</li>
+        <li>Reserve coverage vs circulating supply</li>
+        <li>Custody/segregation confirmation (as applicable)</li>
+      </ul>
+
+      <h3>5) Redemption Performance Metrics</h3>
+      <p>I publish practical redemption stats so the public can judge reliability:</p>
+      <ul>
+        <li>Average Redemption Processing Time: (hours/days)</li>
+        <li>Redemptions Completed (30d): (count / volume)</li>
+        <li>Redemption Queue Status: (normal / elevated / paused)</li>
+        <li>Support Response Time: (SLA)</li>
+      </ul>
+
+      <h3>6) Material Events & Notices</h3>
+      <p>If anything changes that impacts holders, it goes here:</p>
+      <ul>
+        <li>Custodian/bank updates</li>
+        <li>Contract upgrades (if any)</li>
+        <li>Redemption pauses or delays</li>
+        <li>Compliance policy updates</li>
+        <li>Security incidents and postmortems</li>
+      </ul>
+
+      <h3>7) Links</h3>
+      <ul>
+        <li>Redemption Policy: <a class="gl9-link" href="#page-redemption">Jump</a></li>
+        <li>Reserve Policy: <a class="gl9-link" href="#page-reserve">Jump</a></li>
+        <li>Risk Disclosures: <a class="gl9-link" href="#page-risk">Jump</a></li>
+        <li>Compliance Overview: <a class="gl9-link" href="#page-compliance">Jump</a></li>
+        <li>Contact: (support email + compliance email)</li>
+      </ul>
+
+      <div class="gl9-note">
+        Optional live links (replace):<br />
+        GL9SUSD Contract: <code>0xGL9SUSD_CONTRACT</code> — Explorer: <code>https://basescan.org/address/0xGL9SUSD_CONTRACT</code><br />
+        GL9XUSD Contract: <code>0xGL9XUSD_CONTRACT</code> — Explorer: <code>https://basescan.org/address/0xGL9XUSD_CONTRACT</code>
+      </div>
+    </div>
+
+    <!-- ======================================================
+    SHARED PAGE — REDEMPTION POLICY
+    ======================================================= -->
+    <div class="gl9-section" id="page-redemption">
+      <h2>Shared Page — Redemption Policy (GL9SUSD + GL9XUSD)</h2>
+
+      <h3>GODLEVEL9 Stablecoin Redemption Policy</h3>
+      <p><b>Applies to GL9SUSD (Septillion Series) and GL9XUSD (Sextillion Series)</b></p>
+      <p>
+        This page defines how redemption works, who is eligible, what timelines apply, and what conditions
+        may cause delays or refusal.
+      </p>
+      <p><b>Par Redemption Standard:</b> Eligible holders may redeem 1 token for $1.00 USD, subject to the terms below.</p>
+
+      <h3>1) Who Can Redeem</h3>
+      <p>Direct redemption (issuer-side) is available to:</p>
+      <ul>
+        <li>Verified individuals and entities that complete KYC/KYB</li>
+        <li>Users not located in restricted jurisdictions (where applicable)</li>
+        <li>Users that pass sanctions and risk screening</li>
+      </ul>
+      <p>
+        Secondary market holders may still buy/sell on venues that list the tokens, but direct redemption requires verification.
+      </p>
+
+      <h3>2) Supported Redemption Methods</h3>
+      <p>I support redemption via:</p>
+      <ul>
+        <li>Bank transfer (ACH/Wire, where available)</li>
+        <li>Other approved payout rails (optional)</li>
+        <li>Business redemption rails (optional)</li>
+      </ul>
+      <p>Supported currencies: USD (If multi-currency is added later, it will be disclosed here.)</p>
+
+      <h3>3) Redemption Process (Step-by-Step)</h3>
+      <ol style="color: var(--muted); font-size: 13px; line-height: 1.6; margin: 10px 0 0 18px;">
+        <li>Sign in / Verify (KYC/KYB if not already completed)</li>
+        <li>Request Redemption (select token: GL9SUSD or GL9XUSD)</li>
+        <li>Send Tokens to the official redemption address (or redeem via portal contract flow)</li>
+        <li>Compliance Review (automated + manual if flagged)</li>
+        <li>Funds Delivered to the verified payout method</li>
+        <li>Tokens Burned (or otherwise removed from circulation per mechanism)</li>
+      </ol>
+
+      <h3>4) Processing Times</h3>
+      <p>Target processing windows (subject to banking hours and reviews):</p>
+      <ul>
+        <li>Standard: (same business day / next business day)</li>
+        <li>Elevated demand periods: (up to X business days)</li>
+        <li>Manual review cases: (up to Y business days)</li>
+      </ul>
+      <p>If delays occur, the current redemption status is posted on the Transparency Dashboard.</p>
+
+      <h3>5) Minimums, Maximums, and Fees</h3>
+      <ul>
+        <li>Minimum redemption size: (e.g., $100 / $1,000 / none)</li>
+        <li>Maximum per day: (if any)</li>
+        <li>Fees: (none / flat / %)</li>
+      </ul>
+      <p>If fees apply, I disclose: the exact fee schedule, who pays banking fees, and how fees are calculated.</p>
+
+      <h3>6) Compliance Controls (AML / Sanctions)</h3>
+      <p>Redemptions are subject to:</p>
+      <ul>
+        <li>Sanctions screening</li>
+        <li>Fraud screening</li>
+        <li>Transaction monitoring</li>
+        <li>Source-of-funds / source-of-wealth checks (when required)</li>
+        <li>Enhanced due diligence for high-risk categories</li>
+      </ul>
+      <p>This is designed to protect holders and ensure the system can operate publicly.</p>
+
+      <h3>7) When Redemption Can Be Refused</h3>
+      <p>I may refuse or delay redemption if:</p>
+      <ul>
+        <li>The user fails identity verification or compliance checks</li>
+        <li>The transaction is linked to prohibited activity</li>
+        <li>The user is in a restricted jurisdiction</li>
+        <li>There is suspected fraud, theft, or security compromise</li>
+        <li>A legal order or regulatory requirement restricts action</li>
+        <li>A temporary emergency pause is activated for system protection</li>
+      </ul>
+      <p>When possible, I provide a reason and a path to appeal (unless prohibited by law).</p>
+
+      <h3>8) Emergency Pause Policy</h3>
+      <p>
+        In extreme cases (security incident, major exploit attempts, critical infrastructure failure),
+        redemptions may be paused temporarily.
+      </p>
+      <p>If a pause occurs, I publish:</p>
+      <ul>
+        <li>pause start time</li>
+        <li>reason category</li>
+        <li>expected next update time</li>
+        <li>steps being taken</li>
+      </ul>
+
+      <h3>9) Dispute Resolution & Support</h3>
+      <p>
+        Support Contact: (support email)<br />
+        Compliance Contact: (compliance email)<br />
+        Dispute/Appeals: (process link or email)
+      </p>
+
+      <h3>10) Token-Specific Notes (Series Separation)</h3>
+      <p>GL9SUSD and GL9XUSD are separate series. This means:</p>
+      <ul>
+        <li>Redemptions must be requested for the correct token</li>
+        <li>Each series may use separate reserve accounts</li>
+        <li>Each series may publish separate attestations</li>
+        <li>Each series may have separate limits if needed (always disclosed)</li>
+      </ul>
+
+      <h3>11) Public Notice</h3>
+      <p>This policy may update over time. I version all changes and publish effective dates.</p>
+      <ul>
+        <li>Policy Version: v*(#)*</li>
+        <li>Effective Date: (YYYY-MM-DD)</li>
+        <li>Last Updated: (YYYY-MM-DD)</li>
+      </ul>
+    </div>
+
+    <!-- ======================================================
+    SHARED PAGE — RESERVE POLICY
+    ======================================================= -->
+    <div class="gl9-section" id="page-reserve">
+      <h2>Shared Page — Reserve Policy (GL9SUSD + GL9XUSD)</h2>
+
+      <h3>GODLEVEL9 Stablecoin Reserve Policy</h3>
+      <p><b>Applies to GL9SUSD (Septillion Series) and GL9XUSD (Sextillion Series)</b></p>
+      <p>
+        This policy defines what reserves are, what assets qualify, how custody works,
+        how reserve coverage is calculated, and how reserves are reported for both stablecoin series.
+      </p>
+      <p><b>Reserve Standard:</b> Each series is designed to maintain ≥ 100% reserve backing relative to circulating supply, measured on a defined reporting cadence.</p>
+
+      <h3>1) Reserve Coverage Rule (Core Integrity)</h3>
+      <p><b>Reserve Coverage Ratio = (Total Eligible Reserves) ÷ (Circulating Supply)</b></p>
+      <ul>
+        <li>Target: ≥ 1.00x (≥ 100%)</li>
+        <li>If a buffer is used: reserves may be held at &gt; 100% to absorb operational timing and valuation changes.</li>
+      </ul>
+      <p>
+        Important: GL9SUSD and GL9XUSD maintain separate reserve buckets (separate accounting, and where applicable, separate custody accounts).
+      </p>
+
+      <h3>2) Eligible Reserve Assets (Permitted Backing)</h3>
+      <p>Reserves are restricted to high-liquidity assets designed to protect redemption ability:</p>
+
+      <h3>Tier 1 (Primary)</h3>
+      <ul>
+        <li>Cash held at regulated banking partners</li>
+        <li>Demand deposits (cash-equivalent bank balances)</li>
+      </ul>
+
+      <h3>Tier 2 (Highly Liquid Government Instruments)</h3>
+      <ul>
+        <li>Short-dated U.S. Treasury bills (or close equivalents)</li>
+        <li>Overnight or very short-term instruments backed by government securities (where used)</li>
+      </ul>
+
+      <h3>Tier 3 (Cash-Equivalent Funds) — Optional</h3>
+      <ul>
+        <li>Government money market funds (only if they meet internal liquidity and risk standards)</li>
+      </ul>
+
+      <h3>Prohibited / Not Eligible (unless explicitly disclosed and approved)</h3>
+      <ul>
+        <li>Corporate debt / junk bonds</li>
+        <li>Long-duration bonds (high interest-rate sensitivity)</li>
+        <li>Equity securities</li>
+        <li>Illiquid assets (private equity, long-lock products)</li>
+        <li>Cryptoassets as reserve backing (unless explicitly disclosed as a different product category)</li>
+      </ul>
+      <p>If any category outside Tier 1–2 is used, it is disclosed clearly in reporting.</p>
+
+      <h3>3) Reserve Segregation & Ownership</h3>
+      <p>Reserves are held under a segregation standard:</p>
+      <ul>
+        <li>Segregated from operating funds</li>
+        <li>Tracked by series:
+          <ul>
+            <li>GL9SUSD Reserves are accounted for separately</li>
+            <li>GL9XUSD Reserves are accounted for separately</li>
+          </ul>
+        </li>
+        <li>Internal controls ensure reserves are not used for:
+          <ul>
+            <li>operating expenses</li>
+            <li>speculative trading</li>
+            <li>unrelated lending</li>
+            <li>undisclosed collateralization</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>4) Custody & Banking Partners</h3>
+      <p>Reserves are held with approved custody arrangements, such as:</p>
+      <ul>
+        <li>Regulated banks</li>
+        <li>Approved custodians (where applicable)</li>
+        <li>Approved settlement partners for treasuries (where applicable)</li>
+      </ul>
+      <p><b>Custody principles</b></p>
+      <ul>
+        <li>Clear account ownership and control</li>
+        <li>Access controls (multi-approval workflows)</li>
+        <li>Audit trails for all movements</li>
+        <li>Business continuity and incident response procedures</li>
+      </ul>
+      <p><b>Disclosure</b></p>
+      <ul>
+        <li>Custody partners may be listed publicly (subject to contractual and security constraints).</li>
+        <li>If not listed publicly, reserve reports still disclose reserve totals and composition.</li>
+      </ul>
+
+      <h3>5) Minting Rule (Reserve-Linked Issuance)</h3>
+      <p>Tokens are minted under a reserve-linked process:</p>
+      <ul>
+        <li>Mint only after reserve receipt is verified</li>
+        <li>Verification includes:
+          <ul>
+            <li>confirmed bank settlement, and/or</li>
+            <li>confirmed treasury settlement, and/or</li>
+            <li>approved settlement confirmation from custody partner</li>
+          </ul>
+        </li>
+      </ul>
+      <p>No “pre-minting” for circulation is permitted under this policy.</p>
+
+      <h3>6) Redemption Rule (Burn & Settlement)</h3>
+      <p>When redemptions are processed:</p>
+      <ul>
+        <li>tokens are burned (or otherwise permanently removed from circulation via contract mechanism)</li>
+        <li>USD is paid out via approved rails under the Redemption Policy</li>
+      </ul>
+
+      <h3>7) Rebalancing & Liquidity Management</h3>
+      <p>To keep redemption reliable, reserves are managed for liquidity:</p>
+      <ul>
+        <li>a portion is maintained in immediate liquidity (cash/cash equivalents)</li>
+        <li>treasury holdings (if used) are kept short duration</li>
+        <li>maturity laddering is used to avoid liquidity cliffs</li>
+      </ul>
+
+      <h3>8) Attestation / Examination & Reporting Cadence</h3>
+      <p>I publish structured reporting so the public can audit the system.</p>
+      <p><b>Reporting includes</b></p>
+      <ul>
+        <li>circulating supply (per series)</li>
+        <li>total eligible reserves (per series)</li>
+        <li>reserve coverage ratio (per series)</li>
+        <li>reserve composition by category</li>
+        <li>custody framework statement</li>
+        <li>material changes/events</li>
+      </ul>
+
+      <p><b>Cadence</b></p>
+      <ul>
+        <li>Supply: continuous (on-chain)</li>
+        <li>Reserve reporting: (weekly / monthly — set here)</li>
+        <li>Independent attestation/examination: (monthly / quarterly — set here)</li>
+      </ul>
+
+      <h3>9) Material Event Disclosure</h3>
+      <p>If an event materially impacts reserves or redemption, it is disclosed, such as:</p>
+      <ul>
+        <li>custody partner change</li>
+        <li>bank partner change</li>
+        <li>reporting method change</li>
+        <li>redemption pause or major delay</li>
+        <li>security incident affecting reserve operations</li>
+      </ul>
+
+      <h3>10) Policy Versioning</h3>
+      <ul>
+        <li>Policy Version: v*(#)*</li>
+        <li>Effective Date: (YYYY-MM-DD)</li>
+        <li>Last Updated: (YYYY-MM-DD)</li>
+      </ul>
+    </div>
+
+    <!-- ======================================================
+    SHARED PAGE — RISK DISCLOSURES
+    ======================================================= -->
+    <div class="gl9-section" id="page-risk">
+      <h2>Shared Page — Risk Disclosures (GL9SUSD + GL9XUSD)</h2>
+
+      <h3>GODLEVEL9 Stablecoin Risk Disclosures</h3>
+      <p><b>Applies to GL9SUSD (Septillion Series) and GL9XUSD (Sextillion Series)</b></p>
+      <p>
+        Stablecoins are designed for stability, but no system is risk-free. This page explains the key risks in plain language.
+      </p>
+      <p><b>Not financial advice.</b> Users should evaluate risks, local laws, and their own circumstances before using any token.</p>
+
+      <h3>1) Redemption & Liquidity Risk</h3>
+      <p>Even with reserve backing, redemption can face delays due to:</p>
+      <ul>
+        <li>banking hours and settlement cutoffs</li>
+        <li>elevated redemption demand (“run” conditions)</li>
+        <li>compliance reviews</li>
+        <li>operational outages</li>
+      </ul>
+      <p>Redemption timelines and eligibility rules are defined in the Redemption Policy.</p>
+
+      <h3>2) Custody / Bank Risk</h3>
+      <p>Reserves depend on third-party financial institutions:</p>
+      <ul>
+        <li>a bank or custodian may restrict access</li>
+        <li>institutions can fail or face regulatory action</li>
+        <li>payment rails can experience outages</li>
+      </ul>
+      <p>These events may temporarily impact redemption speed.</p>
+
+      <h3>3) Regulatory & Legal Risk</h3>
+      <p>Stablecoin rules vary by jurisdiction and can change.</p>
+      <ul>
+        <li>certain countries may restrict stablecoin use</li>
+        <li>exchanges may delist due to compliance requirements</li>
+        <li>redemption availability may be limited in restricted jurisdictions</li>
+      </ul>
+      <p>Users are responsible for complying with local laws.</p>
+
+      <h3>4) Compliance Risk (KYC/AML/Sanctions)</h3>
+      <p>Redemption and certain services may require:</p>
+      <ul>
+        <li>identity verification (KYC/KYB)</li>
+        <li>sanctions screening</li>
+        <li>transaction monitoring</li>
+        <li>enhanced due diligence for high-risk cases</li>
+      </ul>
+      <p>This can lead to delays or refusal where prohibited activity is suspected or where legal requirements apply.</p>
+
+      <h3>5) Market Price Deviation Risk</h3>
+      <p>Even if a stablecoin targets $1, secondary market prices can deviate due to:</p>
+      <ul>
+        <li>liquidity conditions</li>
+        <li>exchange order book depth</li>
+        <li>market stress events</li>
+        <li>redemption access limitations for certain users</li>
+      </ul>
+      <p>A temporary deviation does not necessarily mean reserves are missing, but it can occur.</p>
+
+      <h3>6) Smart Contract & Technical Risk</h3>
+      <p>On-chain tokens rely on software:</p>
+      <ul>
+        <li>contract vulnerabilities can be exploited</li>
+        <li>integrations (bridges, wallets, exchanges) can fail</li>
+        <li>chain congestion can raise fees or delay transfers</li>
+      </ul>
+      <p>Mitigations may include audits, cautious upgrade policies, and emergency pause functions.</p>
+
+      <h3>7) Operational & Governance Risk</h3>
+      <p>Stablecoin operations involve people and procedures:</p>
+      <ul>
+        <li>human error</li>
+        <li>internal control failure</li>
+        <li>key management incidents</li>
+        <li>fraud attempts</li>
+      </ul>
+      <p>Mitigations include access controls, multi-approval workflows, monitoring, and incident response plans.</p>
+
+      <h3>8) Attestation / Reporting Limitations</h3>
+      <p>Attestations (if provided) are snapshots:</p>
+      <ul>
+        <li>they confirm reserves as of specific dates</li>
+        <li>they do not eliminate all risk</li>
+        <li>reporting depends on data sources and valuation methods</li>
+      </ul>
+      <p>Users should review the methodology and timing of reports.</p>
+
+      <h3>9) Force Majeure & Extraordinary Events</h3>
+      <p>Events outside control may affect operations:</p>
+      <ul>
+        <li>systemwide banking disruptions</li>
+        <li>cyberattacks on critical vendors</li>
+        <li>government or court orders</li>
+        <li>war, sanctions expansions, or market freezes</li>
+      </ul>
+      <p>These events may cause delays, pauses, or restrictions.</p>
+
+      <h3>10) No Guarantee of Universal Access</h3>
+      <p>Access can vary by:</p>
+      <ul>
+        <li>jurisdiction</li>
+        <li>exchange support</li>
+        <li>wallet or platform availability</li>
+        <li>compliance eligibility</li>
+      </ul>
+      <p>Users may not have the same redemption path in every region.</p>
+
+      <h3>11) Series Separation Risk (GL9SUSD vs GL9XUSD)</h3>
+      <p>GL9SUSD and GL9XUSD are separate series:</p>
+      <ul>
+        <li>each has its own reserve bucket and reporting</li>
+        <li>redemption must be requested for the correct token</li>
+        <li>limits or rules may differ by series (always disclosed if so)</li>
+      </ul>
+
+      <h3>12) Versioning</h3>
+      <ul>
+        <li>Disclosure Version: v*(#)*</li>
+        <li>Effective Date: (YYYY-MM-DD)</li>
+        <li>Last Updated: (YYYY-MM-DD)</li>
+      </ul>
+    </div>
+
+    <!-- ======================================================
+    SHARED PAGE — COMPLIANCE OVERVIEW
+    ======================================================= -->
+    <div class="gl9-section" id="page-compliance">
+      <h2>Shared Page — Compliance Overview (GL9SUSD + GL9XUSD)</h2>
+
+      <h3>GODLEVEL9 Stablecoin Compliance Program</h3>
+      <p><b>Applies to GL9SUSD (Septillion Series) and GL9XUSD (Sextillion Series)</b></p>
+      <p>
+        This page summarizes how GL9SUSD and GL9XUSD are operated with a compliance framework suitable for
+        public stablecoin issuance and redemption. The goal is simple:
+      </p>
+      <ul>
+        <li>protect holders</li>
+        <li>prevent illicit use</li>
+        <li>keep banking and redemption rails functional</li>
+        <li>meet legal obligations where the program operates</li>
+      </ul>
+      <p>Note: Requirements vary by jurisdiction. Access to minting/redemption may be limited or unavailable in restricted regions.</p>
+
+      <h3>1) What This Compliance Program Covers</h3>
+      <p>This program applies to:</p>
+      <ul>
+        <li>Direct minting (issuer-side issuance to verified users/institutions)</li>
+        <li>Direct redemption (issuer-side cash-out at par under policy terms)</li>
+        <li>Issuer-controlled operations (reserve flows, banking rails, reporting)</li>
+      </ul>
+      <p>This program does not necessarily apply to:</p>
+      <ul>
+        <li>secondary market trading between third parties (which may occur on platforms that list the token), though sanctioned or prohibited addresses may be restricted where legally required.</li>
+      </ul>
+
+      <h3>2) Identity Verification (KYC / KYB)</h3>
+      <p>To access direct minting or redemption, users must complete verification.</p>
+      <p><b>Individuals (KYC)</b></p>
+      <ul>
+        <li>Government-issued ID verification</li>
+        <li>Basic identity checks</li>
+        <li>Risk screening</li>
+      </ul>
+      <p><b>Businesses (KYB)</b></p>
+      <ul>
+        <li>Entity registration validation</li>
+        <li>Ownership/beneficial owner checks (where applicable)</li>
+        <li>Authorized signatory verification</li>
+        <li>Risk screening</li>
+      </ul>
+      <p><b>Why this exists</b></p>
+      <ul>
+        <li>Prevents fraud and abuse</li>
+        <li>Supports banking and payment partner requirements</li>
+        <li>Helps satisfy legal obligations in many jurisdictions</li>
+      </ul>
+
+      <h3>3) Sanctions Screening</h3>
+      <p>I screen users and transactions against sanctions and prohibited-party lists, consistent with applicable law.</p>
+      <p>This can include:</p>
+      <ul>
+        <li>screening at onboarding</li>
+        <li>ongoing screening for changes</li>
+        <li>screening at redemption/mint time</li>
+        <li>screening of high-risk transaction patterns</li>
+      </ul>
+      <p>If sanctions risk is detected:</p>
+      <ul>
+        <li>access may be denied</li>
+        <li>redemptions may be refused</li>
+        <li>accounts may be suspended</li>
+        <li>reporting may occur where required</li>
+      </ul>
+
+      <h3>4) AML Controls (Anti–Money Laundering)</h3>
+      <p>I maintain AML controls to detect and prevent illicit finance.</p>
+      <p>Controls include:</p>
+      <ul>
+        <li>transaction monitoring</li>
+        <li>velocity and volume analysis</li>
+        <li>pattern detection for suspicious behavior</li>
+        <li>enhanced due diligence for higher-risk users</li>
+        <li>investigation and escalation workflows</li>
+      </ul>
+      <p>If a transaction is flagged:</p>
+      <ul>
+        <li>it may be delayed for review</li>
+        <li>additional information may be requested</li>
+        <li>redemption may be refused where required</li>
+      </ul>
+
+      <h3>5) Source-of-Funds / Source-of-Wealth (When Required)</h3>
+      <p>For larger redemptions or higher risk categories, I may request:</p>
+      <ul>
+        <li>proof of source-of-funds (bank statements, business revenue records, etc.)</li>
+        <li>source-of-wealth explanations (how funds were obtained)</li>
+      </ul>
+      <p>This is used for:</p>
+      <ul>
+        <li>fraud prevention</li>
+        <li>risk management</li>
+        <li>meeting legal or partner compliance standards</li>
+      </ul>
+
+      <h3>6) Prohibited Activity</h3>
+      <p>I do not support activity involving:</p>
+      <ul>
+        <li>sanctioned entities or jurisdictions (as applicable)</li>
+        <li>fraud, theft, or scam proceeds</li>
+        <li>terrorist financing</li>
+        <li>child exploitation material or related transactions</li>
+        <li>trafficking-related proceeds</li>
+        <li>ransomware payments (where prohibited)</li>
+        <li>laundering attempts through structured redemptions</li>
+      </ul>
+      <p>If prohibited activity is suspected, actions may include:</p>
+      <ul>
+        <li>account freeze/suspension</li>
+        <li>refusal of service/redemption</li>
+        <li>reporting where legally required</li>
+      </ul>
+
+      <h3>7) Data Handling & Retention</h3>
+      <p>I collect only what is needed to operate safely and lawfully.</p>
+      <p><b>Data types may include</b></p>
+      <ul>
+        <li>identity verification data (KYC/KYB)</li>
+        <li>transaction logs and redemption records</li>
+        <li>compliance review notes</li>
+        <li>banking payout details for redemptions</li>
+      </ul>
+      <p><b>Retention</b></p>
+      <ul>
+        <li>retained for a defined period required by policy/law/partner standards</li>
+        <li>secure storage practices are used</li>
+        <li>access is restricted internally</li>
+      </ul>
+
+      <h3>8) Appeals & Dispute Process</h3>
+      <p>If a user is denied redemption or access due to compliance review, I provide a process for:</p>
+      <ul>
+        <li>requesting reconsideration (where allowed)</li>
+        <li>submitting clarifying documentation</li>
+        <li>escalating disputes through support/compliance channels</li>
+      </ul>
+      <p>Some cases may not allow disclosure of the reason due to legal restrictions.</p>
+
+      <h3>9) Monitoring, Audits, and Internal Controls</h3>
+      <p>I operate internal controls to reduce operational risk:</p>
+      <ul>
+        <li>role-based access controls (least privilege)</li>
+        <li>multi-approval workflows for reserve movements</li>
+        <li>logging and audit trails</li>
+        <li>periodic internal reviews</li>
+        <li>incident response procedures</li>
+      </ul>
+
+      <h3>10) Jurisdictional Limitations</h3>
+      <p>Stablecoin services may not be available everywhere. I may restrict access based on:</p>
+      <ul>
+        <li>residency or location</li>
+        <li>local regulation</li>
+        <li>banking partner coverage</li>
+        <li>sanctions requirements</li>
+      </ul>
+
+      <h3>11) Contact</h3>
+      <ul>
+        <li>Support: (support email)</li>
+        <li>Compliance: (compliance email)</li>
+        <li>Disputes/Appeals: (appeals email or form link)</li>
+      </ul>
+
+      <h3>12) Versioning</h3>
+      <ul>
+        <li>Compliance Program Version: v*(#)*</li>
+        <li>Effective Date: (YYYY-MM-DD)</li>
+        <li>Last Updated: (YYYY-MM-DD)</li>
+      </ul>
+    </div>
+
+    <!-- ======================================================
+    SHARED PAGE — PROGRAM TERMS (TEMPLATE)
+    ======================================================= -->
+    <div class="gl9-section" id="page-terms">
+      <h2>Shared Page — Stablecoin Program Terms (Template)</h2>
+
+      <h3>GODLEVEL9 Stablecoin Program Terms</h3>
+      <p><b>Applies to GL9SUSD and GL9XUSD</b></p>
+      <p>
+        This Terms page is a template for the stablecoin program. It ties together:
+      </p>
+      <ul>
+        <li>Reserve Policy</li>
+        <li>Redemption Policy</li>
+        <li>Transparency Dashboard</li>
+        <li>Risk Disclosures</li>
+        <li>Compliance Overview</li>
+      </ul>
+      <p><b>This is a draft template for program operations and should be reviewed by legal counsel before publication.</b></p>
+
+      <h3>1) Definitions</h3>
+      <ul>
+        <li>“Issuer” means the GODLEVEL9 Reserve stablecoin program operator.</li>
+        <li>“Tokens” means GL9SUSD and GL9XUSD.</li>
+        <li>“User” means any person or entity interacting with issuer services (mint/redemption).</li>
+        <li>“Direct Redemption” means redemption through issuer-controlled rails.</li>
+        <li>“Reserves” means eligible reserve assets held under the Reserve Policy.</li>
+      </ul>
+
+      <h3>2) Program Description</h3>
+      <p>GL9SUSD and GL9XUSD are USD-pegged stablecoin series designed to:</p>
+      <ul>
+        <li>maintain reserve-backed issuance discipline</li>
+        <li>offer par redemption to eligible users under published policies</li>
+        <li>publish transparency reporting and disclosures</li>
+      </ul>
+
+      <h3>3) Eligibility</h3>
+      <p>Issuer services (minting/redemption) may require:</p>
+      <ul>
+        <li>KYC/KYB verification</li>
+        <li>sanctions screening</li>
+        <li>ongoing compliance monitoring</li>
+        <li>eligibility by jurisdiction</li>
+      </ul>
+      <p>Users may be denied service if they fail eligibility or compliance requirements.</p>
+
+      <h3>4) Minting (Issuer-Side)</h3>
+      <ul>
+        <li>Tokens are minted only under the issuer’s reserve-linked issuance rules.</li>
+        <li>Issuer may refuse minting requests based on compliance, fraud risk, or legal requirements.</li>
+        <li>Minting availability may vary by jurisdiction and partner coverage.</li>
+      </ul>
+
+      <h3>5) Redemption (Issuer-Side)</h3>
+      <ul>
+        <li>Eligible users may request redemption at par under the Redemption Policy.</li>
+        <li>Redemption processing time may vary due to banking hours, review requirements, and system load.</li>
+        <li>Issuer may delay or refuse redemption in compliance-related or legally restricted scenarios.</li>
+      </ul>
+
+      <h3>6) Fees</h3>
+      <ul>
+        <li>Fees, if any, are disclosed in the Redemption Policy.</li>
+        <li>Bank wire/rail fees may be passed through where disclosed.</li>
+      </ul>
+
+      <h3>7) Compliance Requirements</h3>
+      <p>Users agree to:</p>
+      <ul>
+        <li>provide accurate information</li>
+        <li>complete KYC/KYB when required</li>
+        <li>not use tokens for prohibited activity</li>
+        <li>comply with applicable laws and sanctions rules</li>
+      </ul>
+      <p>Issuer may:</p>
+      <ul>
+        <li>monitor transactions</li>
+        <li>request additional information</li>
+        <li>suspend or terminate access</li>
+        <li>report activity where legally required</li>
+      </ul>
+
+      <h3>8) Disclosures and No Advice</h3>
+      <ul>
+        <li>Nothing on the site is financial, legal, or tax advice.</li>
+        <li>Stablecoins involve risks described in the Risk Disclosures page.</li>
+        <li>Users are responsible for complying with local law.</li>
+      </ul>
+
+      <h3>9) Technology and Smart Contract Risk</h3>
+      <p>Tokens depend on:</p>
+      <ul>
+        <li>blockchain network performance</li>
+        <li>third-party integrations (wallets, exchanges, bridges)</li>
+        <li>smart contract security</li>
+      </ul>
+      <p>Issuer may:</p>
+      <ul>
+        <li>pause certain functions to protect users</li>
+        <li>upgrade contracts (if upgradeability is used) with disclosure and notice policies</li>
+      </ul>
+
+      <h3>10) Limitation of Liability (Template)</h3>
+      <p>To the extent permitted by law:</p>
+      <ul>
+        <li>issuer is not liable for losses caused by factors outside its control (network outages, banking failures, force majeure)</li>
+        <li>issuer is not liable for third-party platform failures (exchanges, wallets)</li>
+      </ul>
+      <p>(Exact language should be finalized by counsel.)</p>
+
+      <h3>11) Changes to Policies</h3>
+      <p>Issuer may update:</p>
+      <ul>
+        <li>Reserve Policy</li>
+        <li>Redemption Policy</li>
+        <li>Compliance Program</li>
+        <li>Risk Disclosures</li>
+      </ul>
+      <p>All changes are versioned and effective dates are published.</p>
+
+      <h3>12) Governing Law / Dispute Resolution (Placeholder)</h3>
+      <ul>
+        <li>Governing law: (jurisdiction)</li>
+        <li>Dispute resolution: (courts/arbitration)</li>
+        <li>Venue: (location)</li>
+      </ul>
+
+      <h3>13) Contact</h3>
+      <ul>
+        <li>Support: (support email)</li>
+        <li>Compliance: (compliance email)</li>
+        <li>Legal: (legal email)</li>
+      </ul>
+
+      <h3>14) Versioning</h3>
+      <ul>
+        <li>Terms Version: v*(#)*</li>
+        <li>Effective Date: (YYYY-MM-DD)</li>
+        <li>Last Updated: (YYYY-MM-DD)</li>
+      </ul>
+
+      <div class="gl9-note">
+        <b>Series separation:</b> GL9SUSD and GL9XUSD are separate stablecoin series.
+        Each is designed with separate reserve buckets, separate reporting, and separate attestations,
+        while maintaining one integrity standard.
+      </div>
+    </div>
+
+    <!-- Footer disclosure -->
+    <div class="gl9-footer">
+      <b>Disclosure Notice (Draft):</b><br />
+      GL9SUSD and GL9XUSD are designed as USD-pegged stablecoin series with reserve and redemption policies.
+      Availability, redemption access, and supported jurisdictions may vary based on legal requirements.
+      Nothing on this page is financial advice. Terms, disclosures, and policies are published and updated as the program evolves.
+    </div>
+
+    <noscript>
+      <div class="gl9-nojs">
+        JavaScript is disabled. On-chain supply links and dashboard widgets may not display.
+      </div>
+    </noscript>
+
+  </div>
+</div>
+
+<!-- =========================
+Optional JS helpers (safe)
+========================= -->
+<script>
+  (function () {
+    window.GL9 = window.GL9 || {};
+    window.GL9.track = function (eventName, data) {
+      try { console.log("[GL9 Track]", eventName, data || {}); } catch (e) {}
+    };
+  })();
+</script>
+
+<!-- =========================
+Placeholder Guard (remove later)
+========================= -->
+<script>
+  (function () {
+    var placeholders = [
+      "YOURDOMAIN.COM",
+      "(support email)",
+      "(compliance email)",
+      "(legal email)",
+      "(address)",
+      "(PDF link)",
+      "(YYYY-MM-DD)",
+      "0xGL9SUSD_CONTRACT",
+      "0xGL9XUSD_CONTRACT"
+    ];
+    var html = document.documentElement.innerHTML || "";
+    var found = placeholders.filter(function (p) { return html.indexOf(p) !== -1; });
+    if (found.length) {
+      try { console.warn("[GL9] Replace placeholders before publishing:", found); } catch (e) {}
+    }
+  })();
+</script>
